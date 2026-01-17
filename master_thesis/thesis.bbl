@@ -20,19 +20,22 @@ M. Eladawi,
 
 \bibitem{dongre2022implicit_channel_coordination}
 S. Dongre and H. Rahbari,
-``Implicit channel coordination to tackle starvation attacks in 5g and wi-fi coexistence systems,''
+``Implicit channel coordination to tackle starvation attacks in 5g and wi-fi
+  coexistence systems,''
 Proc.\ IEEE Global Communications Conference (GLOBECOM),
 pp.4136--4141, Dec. 2022.
 
 \bibitem{jiang2022_transformer_mobility_negligible}
 H. Jiang, M. Cui, D.W.K. Ng, and L. Dai,
-``Accurate channel prediction based on transformer: Making mobility negligible,''
+``Accurate channel prediction based on transformer: Making mobility
+  negligible,''
 IEEE Journal on Selected Areas in Communications,
 vol.40, no.9, pp.2717--2732, Sept. 2022.
 
 \bibitem{zhu2019_adaptive_parameter_free_rnn}
 Y. Zhu, X. Dong, and T. Lu,
-``An adaptive and parameter-free recurrent neural structure for wireless channel prediction,''
+``An adaptive and parameter-free recurrent neural structure for wireless
+  channel prediction,''
 IEEE Transactions on Communications,
 vol.67, no.11, pp.8086--8096, Nov. 2019.
 
@@ -43,9 +46,11 @@ vol.67, no.11, pp.8086--8096, Nov. 2019.
 \newblock Accessed Dec. 14, 2025.
 
 \bibitem{li2019_dl_mimo_csi_feedback}
-J. Li, Q. Zhang, X. Xin, Y. Tao, Q. Tian, F. Tian, D. Chen, Y. Shen, G. Cao, Z. Gao, and J. Qian,
+J. Li, Q. Zhang, X. Xin, Y. Tao, Q. Tian, F. Tian, D. Chen, Y. Shen, G. Cao, Z.
+  Gao, and J. Qian,
 ``Deep learning-based massive {MIMO} {CSI} feedback,''
-Proc.\ 2019 18th International Conference on Optical Communications and Networks (ICOCN),
+Proc.\ 2019 18th International Conference on Optical Communications and
+  Networks (ICOCN),
 pp.1--3, Aug. 2019.
 
 \bibitem{3gpp_38821}
@@ -56,49 +61,58 @@ pp.1--3, Aug. 2019.
 
 \bibitem{wiener1949extrapolation}
 N. Wiener,
-Extrapolation, Interpolation, and Smoothing of Stationary Time Series: With Engineering Applications,
-Technology Press of the Massachusetts Institute of Technology and John Wiley \& Sons,
+Extrapolation, Interpolation, and Smoothing of Stationary Time Series: With
+  Engineering Applications,
+Technology Press of the Massachusetts Institute of Technology and John Wiley \&
+  Sons,
 Cambridge, MA and New York, 1949.
 
 \bibitem{arya2018_kalman_channel_aging}
 V. Arya and K. Appaiah,
 ``Kalman filter based tracking for channel aging in massive {MIMO} systems,''
-Proc.\ 2018 International Conference on Signal Processing and Communications (SPCOM),
+Proc.\ 2018 International Conference on Signal Processing and Communications
+  (SPCOM),
 pp.362--366, 2018.
 
 \bibitem{zhang2021_cv3dcnn}
 Y. Zhang, J. Wang, J. Sun, B. Adebisi, H. Gacanin, G. Gui, and F. Adachi,
-``{CV-3DCNN}: Complex-valued deep learning for {CSI} prediction in {FDD} massive {MIMO} systems,''
+``{CV-3DCNN}: Complex-valued deep learning for {CSI} prediction in {FDD}
+  massive {MIMO} systems,''
 IEEE Wireless Communications Letters,
 vol.10, no.2, pp.266--270, Feb. 2021.
 
 \bibitem{ding2013_cvnn_fading}
 T. Ding and A. Hirose,
-``Fading channel prediction based on complex-valued neural networks in frequency domain,''
+``Fading channel prediction based on complex-valued neural networks in
+  frequency domain,''
 Proc.\ 2013 International Symposium on Electromagnetic Theory (EMTS),
 pp.640--643, May 2013.
 
 \bibitem{jiang2019_rnn_freqdomain_prediction}
 W. Jiang and H.D. Schotten,
-``Recurrent neural network-based frequency-domain channel prediction for wideband communications,''
+``Recurrent neural network-based frequency-domain channel prediction for
+  wideband communications,''
 Proc.\ 2019 IEEE 89th Vehicular Technology Conference (VTC2019-Spring),
 pp.1--6, Apr. 2019.
 
 \bibitem{yuan2020_ml_channel_prediction_aging}
 J. Yuan, H.Q. Ngo, and M. Matthaiou,
-``Machine learning-based channel prediction in massive {MIMO} with channel aging,''
+``Machine learning-based channel prediction in massive {MIMO} with channel
+  aging,''
 IEEE Transactions on Wireless Communications,
 vol.19, no.5, pp.2960--2973, May 2020.
 
 \bibitem{zheng2023_attention_fading_prediction}
 W. Zheng, Z. Liu, Y. Yuan, J. Li, B. He, and F. Lin,
 ``Fading channel prediction based on attention mechanism,''
-Proc.\ 2023 5th International Conference on Electronic Engineering and Informatics (EEI),
+Proc.\ 2023 5th International Conference on Electronic Engineering and
+  Informatics (EEI),
 pp.400--404, Jun. 2023.
 
 \bibitem{kim2023_meta_denoising_mimo}
 H. Kim, J. Choi, and D.J. Love,
-``Massive {MIMO} channel prediction via meta-learning and deep denoising: Is a small dataset enough?,''
+``Massive {MIMO} channel prediction via meta-learning and deep denoising: Is a
+  small dataset enough?,''
 IEEE Transactions on Wireless Communications,
 pp.\textbullet\textbullet--\textbullet\textbullet, 2023.
 
@@ -116,7 +130,8 @@ M.A. Mohsin, M. Umer, A. Bilal, M.A. Jamshed, and J.M. Cioffi,
 
 \bibitem{3gpp_tr38843}
  {3GPP},
-``Study on artificial intelligence {AI} and machine learning {ML} for {NR} air interface,''
+``Study on artificial intelligence {AI} and machine learning {ML} for {NR} air
+  interface,''
 3GPP TR 38.843,
 pp.\textbullet\textbullet--\textbullet\textbullet, 2023.
 \newblock Release 18.
@@ -124,19 +139,22 @@ pp.\textbullet\textbullet--\textbullet\textbullet, 2023.
 \bibitem{nokia_aiml_ran}
  Nokia,
 ``Scaling up {AI}/{ML} for cellular radio access,''
-\url{https://www.nokia.com/blog/scaling-up-aiml-for-cellular-radio-access/}, 2025.
+\url{https://www.nokia.com/blog/scaling-up-aiml-for-cellular-radio-access/},
+  2025.
 \newblock accessed Dec. 29, 2025.
 
 \bibitem{arxiv_3gpp_standardization}
  Others,
-``On the combination of {AI} and wireless technologies: {3GPP} standardization progress,''
+``On the combination of {AI} and wireless technologies: {3GPP} standardization
+  progress,''
 \url{https://arxiv.org/abs/2407.10984}, 2024.
 \newblock arXiv:2407.10984, accessed Dec. 29, 2025.
 
 \bibitem{wia_challenges}
  {Wireless Infrastructure Association},
 ``The challenges of artificial intelligence in the {RAN},''
-\url{https://wia.org/the-challenges-of-artificial-intelligence-in-the-ran/}, 2025.
+\url{https://wia.org/the-challenges-of-artificial-intelligence-in-the-ran/},
+  2025.
 \newblock accessed Dec. 29, 2025.
 
 \bibitem{kalnay2003_atmospheric_modeling}
@@ -146,7 +164,8 @@ Cambridge University Press, 2003.
 
 \bibitem{evensen2003_enkf}
 G. Evensen,
-``The ensemble kalman filter: Theoretical formulation and practical implementation,''
+``The ensemble kalman filter: Theoretical formulation and practical
+  implementation,''
 Ocean Dynamics,
 vol.53, pp.343--367, 2003.
 
@@ -162,103 +181,12 @@ M.E.M. Makhlouf, M. Guillaud, and Y. Vindas,
 Proceedings of the 2025 EuCNC \& 6G Summit,
 pp.\textbullet\textbullet--\textbullet\textbullet, 2025.
 
-\bibitem{ericsson}
-J. Peter, C. Stephen, B. Greger, K.S. Jason, A. Brian, H. Ahmad, L. Per, and O. Kati,
-``Ericsson mobility report,''
-\url{https://www.ericsson.com/assets/local/reports-papers/mobility-report/documents/2019/emr-november-2019.pdf}.
-\newblock Accessed Jan. 27, 2022.
-
 \bibitem{mit}
-A. Kurs, A. Karalis, R. Moffatt, J.D. Joannopoulos, P. Fisher, and M. Solja{\v c}i{\'c},
+A. Kurs, A. Karalis, R. Moffatt, J.D. Joannopoulos, P. Fisher, and M. Solja{\v
+  c}i{\'c},
 ``Wireless power transfer via strongly coupled magnetic resonances,''
 Science,
 vol.317, no.5834, pp.83--86, July 2007.
-
-\bibitem{wpt_kind}
-H. Shoki,
-``Issues and initiatives for practical use of wireless power transmission technologies in japan,''
-2011 IEEE MTT-S International Microwave Workshop Series on Innovative Wireless Power Transmission: Technologies, Systems, and Applications,
-pp.87--90,
-Kyoto, Japan, May 2011.
-
-\bibitem{emc_1}
-I.A. Shah, Y. Cho, and H. Yoo,
-``Safety evaluation of medical implants in the human body for a wireless power transfer system in an electric vehicle,''
-IEEE Transactions on Electromagnetic Compatibility,
-vol.63, no.3, pp.681--691, June 2021.
-
-\bibitem{emc_2}
-A.O. Hariri, T. Youssef, A. Elsayed, and O. Mohammed,
-``A computational approach for a wireless power transfer link design optimization considering electromagnetic compatibility,''
-IEEE Transactions on Magnetics,
-vol.52, no.3, pp.1--4, March 2016.
-
-\bibitem{emc_3}
-Y. Yamanaka and A. Sugiura,
-``Possible emc regulations for wireless power transmission equipment,''
-Proc.\ 2011 IEEE MTT-S International Microwave Workshop Series on Innovative Wireless Power Transmission: Technologies, Systems, and Applications,
-pp.97--100,
-Kyoto, Japan, May 2011.
-
-\bibitem{human_protect_1}
-A.A.S. {Mohamed}, A. {Meintz}, P. {Schrafel}, and A. {Calabro},
-``Testing and assessment of {EMFs} and touch currents from 25-kw ipt system for medium-duty evs,''
-IEEE Transactions on Vehicular Technology,
-vol.68, no.8, pp.7477--7487, June 2019.
-
-\bibitem{human_protect_2}
-V. Cirimele, F. Freschi, L. Giaccone, L. Pichon, and M. Repetto,
-``Human exposure assessment in dynamic inductive power transfer for automotive applications,''
-IEEE Transactions on Magnetics,
-vol.53, no.6, pp.1--4, June 2017.
-
-\bibitem{human_protect_3}
-A. {Christ}, M. {Douglas}, J. {Nadakuduti}, and N. {Kuster},
-``Assessing human exposure to electromagnetic fields from wireless power transmission systems,''
-Proceedings of the IEEE,
-vol.101, no.6, pp.1482--1493, June 2013.
-
-\bibitem{human_protect_4}
-S. Park,
-``Evaluation of electromagnetic exposure during 85 khz wireless power transfer for electric vehicles,''
-IEEE Transactions on Magnetics,
-vol.54, no.1, pp.1--8, Jan. 2018.
-
-\bibitem{ecc}
- {European Conference of Postal and Telecommunications Administrations(CEPT)/Electronic Communications Committee(ECC)},
-``{ECC} report 289,''
-\url{https://docdb.cept.org/document/8214}.
-\newblock Accessed Jan. 27, 2022.
-
-\bibitem{cispr_1}
- {CISPR 11, ed. 5.1},
-``Industrial, scietific, and medical equipment-radio-frequency disturbance characteristics - limits and methods of measurement,''
-White Paper, May 2010.
-
-\bibitem{cispr_2}
- {CISPR 14-1, ed. 6.0},
-``Electromagnetic compatibility - requirements for household appliances, electric tools and similar apparatus,''
-White Paper, Aug. 2016.
-
-\bibitem{toshiba}
-{石田正明}，{庄木裕樹}，{尾林秀一}，
-``ワイヤレス電力伝送の制度化・標準化の動向と取り組み，\<''
-東芝レビュー，
-第73巻，
-pp.35--38，Jan. 2018．
-
-\bibitem{flores2023_5GNR_frame_structure}
-M.E. Flores, D.D. Poisson, C.J. Stevens, and A.M. Wyglinski,
-``Implementation and evaluation of a smart uplink jamming attack in a public 5g network,''
-IEEE Access,
-vol.11, pp.1--1, 2023.
-\newblock Figure 1: Illustration of the 5G NR frame structure depicting the number of slots per subframe for each numerology and the time-frequency resources. https://www.researchgate.net/figure/Illustration-of-the-5G-NR-frame-structure-depicting-the-number-of-slots-per-subframe-for\_fig1\_372516812
-
-\bibitem{metal_ferrite_1}
-J. Kim, J. Kim, S. Kong, H. Kim, I.-S. Suh, N.P. Suh, D.-H. Cho, J. Kim, and S. Ahn,
-``Coil design and shielding methods for a magnetic resonant wireless power transfer system,''
-Proceedings of the IEEE,
-vol.101, no.6, pp.1332--1342, June 2013.
 
 \bibitem{metal_ferrite_2}
 T. {Campi}, S. {Cruciani}, and M. {Feliziani},
@@ -266,72 +194,6 @@ T. {Campi}, S. {Cruciani}, and M. {Feliziani},
 Proc.\ 2014 International Symposium on Electromagnetic Compatibility, Tokyo,
 pp.422--425,
 Tokyo, Japan, Dec. 2014.
-
-\bibitem{passive_1}
-S. Kim, H. Park, J. Kim, J. Kim, and S. Ahn,
-``Design and analysis of a resonant reactive shield for a wireless power electric vehicle,''
-IEEE Transactions on Microwave Theory and Techniques,
-vol.62, pp.1057--1066, Feb. 2014.
-
-\bibitem{passive_2}
-J. Park, D. Kim, K. Hwang, H.H. Park, S.I. Kwak, J.H. Kwon, and S. Ahn,
-``A resonant reactive shielding for planar wireless power transfer system in smartphone application,''
-IEEE Transactions on Electromagnetic Compatibility,
-vol.59, no.2, pp.695--703, April 2017.
-
-\bibitem{active_1}
-S. {Cruciani}, T. {Campi}, F. {Maradei}, and M. {Feliziani},
-``Active shielding design for wireless power transfer systems,''
-IEEE Transactions on Electromagnetic Compatibility,
-vol.61, no.6, pp.1953--1960, Oct. 2019.
-
-\bibitem{active_2}
-S.Y. {Choi}, B.W. {Gu}, S.W. {Lee}, W.Y. {Lee}, J. {Huh}, and C.T. {Rim},
-``Generalized active {EMF} cancel methods for wireless electric vehicles,''
-IEEE Transactions on Power Electronics,
-vol.29, no.11, pp.5770--5783, Dec. 2014.
-
-\bibitem{active_3}
-T. {Campi}, S. {Cruciani}, F. {Maradei}, and M. {Feliziani},
-``Magnetic field mitigation by multicoil active shielding in electric vehicles equipped with wireless power charging system,''
-IEEE Transactions on Electromagnetic Compatibility,
-vol.62, no.4, pp.1--8, May 2020.
-
-\bibitem{coil_array}
-S. Ahn, et~al.,
-``Reduction of electromagnetic field ({EMF}) of wireless power transfer system using quadruple coil for laptop applications,''
-Proc.\ 2012 IEEE MTT-S International Microwave Workshop Series on Innovative Wireless Power Transmission: Technologies, Systems, and Applications,
-pp.65--68,
-Kyoto, Japan, May 2012.
-
-\bibitem{multi_phase}
-{成田大輝}，{居村岳広}，{藤本博志}，{堀洋一}，
-``磁界共振結合を用いた多相ワイヤレス電力伝送における漏洩電磁波抑制,''
-電子情報通信学会技術報告, WPT2014-31，July 2014．
-
-\bibitem{multi_tx}
-D. Kobuchi, Y. Narusue, and H. Morikawa,
-``Cancellation conditions of magnetic field leakage from inductive power transfer systems,''
-IEEE Transactions on Vehicular Technology,
-vol.70, no.5, pp.4291--4302, May 2021.
-
-\bibitem{antenna_theory}
-C.A. Balanis,
-"Antenna theory: Analysis and Design.",
-John Wiley \& Sons, Feb. 2016.
-
-\bibitem{opt_load_1}
-I. Awai and T. Ishizaki,
-``Transferred power and efficiency of a coupled-resonator wpt system,''
-Proc.\ 2012 IEEE MTT-S International Microwave Workshop Series on Innovative Wireless Power Transmission: Technologies, Systems, and Applications,
-pp.105--108,
-Kyoto, Japan, May 2012.
-
-\bibitem{opt_load_2}
-Y. Narusue, Y. Kawahara, and H. Morikawa,
-``Load optimization factors for analyzing the efficiency of wireless power transfer systems using two-port network parameters,''
-IEICE Electronics Express,
-vol.17, no.10, pp.1--5, May 2020.
 
 \bibitem{gama2014_concept_drift_survey}
 J. Gama, I. {\v{Z}}liobait{\.{e}}, A. Bifet, M. Pechenizkiy, and A. Bouchachia,

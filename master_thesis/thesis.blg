@@ -12,47 +12,45 @@ The style file: bib/sieicej.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bib/reference.bib
-Warning--can't use both volume and number fields in toshiba
-You've used 56 entries,
+You've used 30 entries,
             4010 wiz_defined-function locations,
-            1148 strings with 16971 characters,
-and the built_in function-call counts, 117324 in all, are:
-= -- 15188
-> -- 587
+            1007 strings with 11405 characters,
+and the built_in function-call counts, 51785 in all, are:
+= -- 6517
+> -- 285
 < -- 0
-+ -- 233
-- -- 177
-* -- 5716
-:= -- 12496
-add.period$ -- 69
-call.type$ -- 56
-change.case$ -- 53
++ -- 115
+- -- 85
+* -- 2520
+:= -- 5636
+add.period$ -- 40
+call.type$ -- 30
+change.case$ -- 28
 chr.to.int$ -- 0
-cite$ -- 57
-duplicate$ -- 1184
-empty$ -- 9306
-format.name$ -- 701
-if$ -- 30341
+cite$ -- 30
+duplicate$ -- 613
+empty$ -- 4265
+format.name$ -- 340
+if$ -- 13375
 int.to.chr$ -- 0
-int.to.str$ -- 56
-missing$ -- 45
-newline$ -- 342
-num.names$ -- 56
-pop$ -- 608
+int.to.str$ -- 30
+missing$ -- 23
+newline$ -- 184
+num.names$ -- 30
+pop$ -- 344
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 5998
+skip$ -- 2631
 stack$ -- 0
-substring$ -- 27439
-swap$ -- 279
+substring$ -- 11630
+swap$ -- 132
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 699
-width$ -- 58
-write$ -- 515
-is.kanji.str$ -- 5063
-(There was 1 warning)
+warning$ -- 0
+while$ -- 349
+width$ -- 32
+write$ -- 278
+is.kanji.str$ -- 2242
