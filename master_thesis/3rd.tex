@@ -457,46 +457,6 @@ SSSPでは4スロットに1回，SSPでは3スロットに1回，SPでは2スロ
 
 
 
-\noindent
-錦糸町データセットに対するSPPパターン（周期3，2フレーム連続補間）およびSPPPパターン（周期4，3フレーム連続補間）の補間精度評価をそれぞれ表\ref{tab:kinshicho_spp_results}および表\ref{tab:kinshicho_sppp_results}に示す．
-本実験では補間位置が複数存在するため，補間位置ごとのNMSE（pos）と，それらを統合したOverall NMSEを算出した．
-
-\begin{table}[H]
-  \centering
-  \caption{錦糸町データセットにおけるSPPパターン（周期3，2フレーム連続補間）の補間精度}
-  \label{tab:kinshicho_spp_results}
-  \begin{tabular}{lrrr}
-    \hline
-    手法 & Overall NMSE & pos0 & pos1 \\
-    \hline
-    多項式近似（$d=5, k=3$） & \textbf{0.1286} & 0.1283 & 0.1288 \\
-    スプライン補間（$k=3$） & 0.1314 & 0.1311 & 0.1317 \\
-    スプライン補間（$k=6$） & 0.1364 & 0.1361 & 0.1366 \\
-    スプライン補間（$k=9$） & 0.1364 & 0.1361 & 0.1367 \\
-    多項式近似（$d=4, k=3$） & 0.1691 & 0.1690 & 0.1691 \\
-    多項式近似（$d=6, k=3$） & 0.4187 & 0.4188 & 0.4186 \\
-    \hline
-  \end{tabular}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \caption{錦糸町データセットにおけるSPPPパターン（周期4，3フレーム連続補間）の補間精度}
-  \label{tab:kinshicho_sppp_results}
-  \begin{tabular}{lrrrr}
-    \hline
-    手法 & Overall NMSE & pos0 & pos1 & pos2 \\
-    \hline
-    多項式近似（$d=5, k=3$） & \textbf{0.2756} & 0.2088 & 0.4091 & 0.2088 \\
-    スプライン補間（$k=3$） & 0.2822 & 0.2128 & 0.4209 & 0.2129 \\
-    スプライン補間（$k=9$） & 0.2830 & 0.2134 & 0.4218 & 0.2136 \\
-    スプライン補間（$k=6$） & 0.2830 & 0.2134 & 0.4219 & 0.2136 \\
-    多項式近似（$d=4, k=3$） & 0.3359 & 0.2992 & 0.4091 & 0.2993 \\
-    多項式近似（$d=6, k=3$） & 0.5047 & 0.3987 & 0.7272 & 0.3880 \\
-    \hline
-  \end{tabular}
-\end{table}
-
 \subsubsection{丸の内（LoS）データセットにおける補間精度}
 丸の内（LoS）の地形データから生成した101ファイルのCSI系列に対する補間精度評価を表\ref{tab:marunouchi_sssp_results}に示す．
 
@@ -594,6 +554,46 @@ SPパターンでは欠損率が50\%に達するが，スプライン補間と4�
 
 
 
+
+\noindent
+錦糸町データセットに対するSPPパターン（周期3，2フレーム連続補間）およびSPPPパターン（周期4，3フレーム連続補間）の補間精度評価をそれぞれ表\ref{tab:kinshicho_spp_results}および表\ref{tab:kinshicho_sppp_results}に示す．
+本実験では補間位置が複数存在するため，補間位置ごとのNMSE（pos）と，それらを統合したOverall NMSEを算出した．
+
+\begin{table}[H]
+  \centering
+  \caption{錦糸町データセットにおけるSPPパターン（周期3，2フレーム連続補間）の補間精度}
+  \label{tab:kinshicho_spp_results}
+  \begin{tabular}{lrrr}
+    \hline
+    手法 & Overall NMSE & pos0 & pos1 \\
+    \hline
+    多項式近似（$d=5, k=3$） & \textbf{0.1286} & 0.1283 & 0.1288 \\
+    スプライン補間（$k=3$） & 0.1314 & 0.1311 & 0.1317 \\
+    スプライン補間（$k=6$） & 0.1364 & 0.1361 & 0.1366 \\
+    スプライン補間（$k=9$） & 0.1364 & 0.1361 & 0.1367 \\
+    多項式近似（$d=4, k=3$） & 0.1691 & 0.1690 & 0.1691 \\
+    多項式近似（$d=6, k=3$） & 0.4187 & 0.4188 & 0.4186 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{錦糸町データセットにおけるSPPPパターン（周期4，3フレーム連続補間）の補間精度}
+  \label{tab:kinshicho_sppp_results}
+  \begin{tabular}{lrrrr}
+    \hline
+    手法 & Overall NMSE & pos0 & pos1 & pos2 \\
+    \hline
+    多項式近似（$d=5, k=3$） & \textbf{0.2756} & 0.2088 & 0.4091 & 0.2088 \\
+    スプライン補間（$k=3$） & 0.2822 & 0.2128 & 0.4209 & 0.2129 \\
+    スプライン補間（$k=9$） & 0.2830 & 0.2134 & 0.4218 & 0.2136 \\
+    スプライン補間（$k=6$） & 0.2830 & 0.2134 & 0.4219 & 0.2136 \\
+    多項式近似（$d=4, k=3$） & 0.3359 & 0.2992 & 0.4091 & 0.2993 \\
+    多項式近似（$d=6, k=3$） & 0.5047 & 0.3987 & 0.7272 & 0.3880 \\
+    \hline
+  \end{tabular}
+\end{table}
 
 
 
@@ -759,26 +759,26 @@ SPパターンでは欠損率が50\%に達するが，スプライン補間と4�
   \end{tabular}
 \end{table}
 
-全パターンを通じた結果を総括する．
-表\ref{tab:summary_all_patterns}に，両データセットにおける各手法の平均NMSEを示す．
+SSSP/SSP/SPパターンを通じた結果を総括する．
+表\ref{tab:summary_all_patterns}に，SSSP/SSP/SPパターンにおける各手法の平均NMSEを示す．
 
 \begin{table}[H]
   \centering
-  \caption{全パターンにおける平均NMSE}
+  \caption{SSSP/SSP/SPパターンにおける平均NMSE}
   \label{tab:summary_all_patterns}
-  \begin{tabular}{llcc}
+  \begin{tabular}{llccc}
     \hline
-    手法 & 設定 & 錦糸町 & 丸の内 \\
+    手法 & 設定 & 錦糸町 & 丸の内（LoS） & 丸の内（NLoS） \\
     \hline
-    スプライン補間 & -- & 0.0371 & 0.0365 \\
-    多項式近似 & $d=4, k=3$ & 0.0392 & 0.0370 \\
-    多項式近似 & $d=5, k=3$ & 0.0392 & 0.0370 \\
+    スプライン補間 & -- & 0.0371 & 0.0365 & 0.0552 \\
+    多項式近似 & $d=4, k=3$ & 0.0392 & 0.0370 & 0.0558 \\
+    多項式近似 & $d=5, k=3$ & 0.0392 & 0.0370 & 0.0558 \\
     \hline
   \end{tabular}
 \end{table}
 
 スプライン補間と4次多項式近似は，パイロット疎化率が25\%から50\%に変化しても安定した補間精度を維持した．
-両手法の平均NMSEは0.04以下であり，欠損率の増加に対しても頑健であることが示された．
+錦糸町および丸の内（LoS）では両手法の平均NMSEは0.04以下であり，丸の内（NLoS）においても0.06未満を維持した．
 本評価の結果から，チャネル予測モデルの重み更新に用いる補間手法として，スプライン補間または4次多項式近似が有効であることが示唆された．
 
 
