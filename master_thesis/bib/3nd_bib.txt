@@ -1,0 +1,65 @@
+
+
+
+
+3nd
+各3.Nなどの数字は文章中に"ここに図3_N"と記述しているのでその部分に挿入する
+
+参考URLまたは論文は
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/master_thesis/bib/reference.bib
+に文献引用（bibliographic citation）BibTeX（ビブテック）による文献管理・引用をしたいのでまとめてください
+IEEE citation style（IEEEスタイル）でお願いします
+
+挿入する図:
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/master_thesis/img
+に2nd,3nd,4dn,5ndの図が入っているため指定したものを挿入してください
+
+
+
+
+3.1 
+参考URLまたは論文
+Y. Zhu, X. Dong, and T. Lu, “An Adaptive and Parameter-Free Recurrent Neural
+Structure for Wireless Channel Prediction,” IEEE Transactions on
+Communications, vol. 67, no. 11, pp. 8086–8096, Nov. 2019.
+
+挿入する図
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/picture/3nd/3_1.pdf
+
+
+3.2 
+参考URLまたは論文
+@ARTICLE{9832933,
+  author={Jiang, Hao and Cui, Mingyao and Ng, Derrick Wing Kwan and Dai, Linglong},
+  journal={IEEE Journal on Selected Areas in Communications}, 
+  title={Accurate Channel Prediction Based on Transformer: Making Mobility Negligible}, 
+  year={2022},
+  volume={40},
+  number={9},
+  pages={2717-2732},
+  keywords={Channel estimation;Transformers;Predictive models;Precoding;Antenna arrays;Aging;Radio frequency;Channel prediction;error propagation;transformer;attention mechanism;machine learning},
+  doi={10.1109/JSAC.2022.3191334}}
+
+
+挿入する図
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/picture/3nd/3_2.pdf
+挿入する図の位置
+
+
+3.3 
+
+参考URLまたは論文
+
+
+挿入する図
+
+
+
+
+
+3.4
+参考URLまたは論文は
+
+
+挿入する図:
+

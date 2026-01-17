@@ -1,0 +1,116 @@
+%!make thesis.dvi
+%======================================================================
+% 設定
+%======================================================================
+
+%----------------------------------------------------------------------
+% 章，節など
+%----------------------------------------------------------------------
+\def\thesection{\arabic{chapter}.\arabic{section}}
+\def\thesubsection{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\def\thesubsubsection{(\alph{subsubsection})}
+\def\theenumii{\roman{enumii}}
+\def\labelenumii{(\theenumii)}
+
+%----------------------------------------------------------------------
+% 数式
+%----------------------------------------------------------------------
+% Equation
+%\makeatletter
+%\def\theequation{%
+% \arabic{section}.\arabic{equation}}
+%\@addtoreset{equation}{section}
+%\makeatother
+
+%----------------------------------------------------------------------
+% Caption
+%----------------------------------------------------------------------
+\makeatletter
+\long\def\@makecaption#1#2{
+  \vskip\abovecaptionskip
+  \iftdir\sbox\@tempboxa{#1\hskip1zw#2}
+    \else\sbox\@tempboxa{#1\ \ #2}
+  \fi
+  \ifdim \wd\@tempboxa >\hsize%
+    \iftdir #1\hskip1zw#2\relax\par
+      \else #1\ \ #2\relax\par\fi
+  \else
+    \global \@minipagefalse
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother
+
+
+%----------------------------------------------------------------------
+% enumerate環境
+%----------------------------------------------------------------------
+% enumの書式変更
+\makeatletter
+\renewcommand{\theenumi}{\@arabic\c@enumi}
+\renewcommand{\labelenumi}{\kern-.5zw （\,\theenumi\,）\kern-.5zw}
+
+% enumerate環境のインデントを変更
+\renewenvironment{enumerate}
+  {%
+   \ifnum \@enumdepth >3\relax\@toodeep\else
+    \advance\@enumdepth\@ne
+    \edef\@enumctr{enum\romannumeral\the\@enumdepth}%
+    \list{\csname label\@enumctr\endcsname}{%
+    \leftmargin1.5zw
+    \labelsep1zw
+    \labelwidth\z@
+    \itemindent2zw
+    \listparindent1zw
+    \topsep\z@\parsep\z@\partopsep\z@\itemsep\z@
+    \usecounter{\@enumctr}%
+    \def\makelabel##1{\hss\llap{##1}}}%
+   \fi}{\endlist}
+\makeatother
+
+
+%----------------------------------------------------------------------
+% hyperref-dvipdfmの修正
+%   OSXのPreview.appでちゃんと動くようにする対策
+%----------------------------------------------------------------------
+\makeatletter
+\def\@pdfm@dest#1{%
+  \Hy@SaveLastskip
+  \@pdfm@mark{dest (#1) [@thispage /\@pdfview\space @xpos @ypos null]}%
+  \Hy@RestoreLastskip
+  }
+\makeatother
+
+
+%\rhead{\leftmark}
+
+%----------------------------------------------------------------------
+% 「参考文献」を目次に出す
+%----------------------------------------------------------------------
+% \makeatletter%% プリアンブルで定義する場合は必須
+%% (j)report・(j)book クラスの場合
+%%
+% \renewenvironment{thebibliography}[1]% 再定義
+% {\chapter*{\bibname\@mkboth{\bibname}{\bibname}}%
+%  \addcontentsline{toc}{chapter}{\bibname}% この行追加
+%    \list{\@biblabel{\@arabic\c@enumiv}}%
+%         {\settowidth\labelwidth{\@biblabel{#1}}%
+%          \leftmargin\labelwidth
+%          \advance\leftmargin\labelsep
+%          \@openbib@code
+%          \usecounter{enumiv}%
+%          \let\p@enumiv\@empty
+%          \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+%    \sloppy
+%    \clubpenalty4000
+%    \@clubpenalty\clubpenalty
+%    \widowpenalty4000%
+%    \sfcode`\.\@m}
+%   {\def\@noitemerr
+%     {\@latex@warning{Empty `thebibliography' environment}}%
+%    \endlist}
+
+%%
+% \def\chaptermark#1{\markboth {\ifnum \c@secnumdepth>\m@ne
+% \@chapapp\ \thechapter \@chappos\ \fi #1}{}}
+% \makeatother%% プリアンブルで定義する場合は必須

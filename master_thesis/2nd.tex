@@ -1,0 +1,438 @@
+\chapter{5G NR物理層におけるチャネル予測}{}
+\label{chap:2nd}
+%★名言が必要ない場合には空っぽにすればOK．
+
+\section{はじめに}
+本章ではMIMO（Multiple-Input Multiple-Output）伝送を扱うために必要な基礎事項を整理する．
+まずチャネルの表現を帯域幅とアンテナ数の観点から整理し，狭域・広域，SISO・MIMOの違いを明確にする．
+続いて，本論文で用いる前提（広域MIMOの周波数領域表現）を定義する．
+
+
+
+\section{5G NRの物理層における無線伝送処理}
+
+
+
+移動体通信におけるチャネルは，送信信号が空間を伝搬して受信信号へ至る対応関係を表す．
+無線信号は搬送波による周波数変換を経て送受信されるため，解析では一般に複素ベースバンド表現を用いる．
+複素ベースバンド信号とは，送信側では変調後に搬送波へ上変換する直前，受信側では搬送波から下変換した直後で復調する前の，I成分およびQ成分で表される複素信号である．
+
+本節では，帯域幅とアンテナ数の観点からチャネルモデルを整理し，信号の入出力関係を示す．また，5G NRではOFDMと複数アンテナ伝送が用いられるため，本論文では周波数領域の広域MIMO表現を前提として定式化する．
+
+狭域SISOチャネルでは，信号帯域が遅延拡散に比べて十分に狭いとみなし，周波数選択性を無視する．
+このとき，1本の送信アンテナからの信号は単一の複素係数で表されるフェージングを受けて受信アンテナに到達する．
+送信信号を$x$，受信信号を$y$，チャネル係数を$h$，雑音を$n$とすると，入出力関係は次式で与えられる．
+
+\begin{equation}
+y = hx + n .
+\end{equation}
+
+広域チャネルでは，マルチパス遅延の影響により周波数選択性が無視できない．
+OFDMを想定すると，時間領域の畳み込みは周波数領域ではサブキャリアごとの乗算として表される．
+分割帯域数を$N_b$，サブキャリアの添字を$f$とすると，広域SISOチャネルの入出力関係は次式で表される．
+
+\begin{equation}
+y(f) = h(f)x(f) + n(f) \quad f = 0, 1, \ldots, N_b - 1 .
+\end{equation}
+
+
+実際の移動体通信では，周波数選択性に加えて複数アンテナを用いることが一般的である．
+この場合，サブキャリアごとにMIMOチャネル行列が定義され，送信ベクトルは受信ベクトルへ線形変換される．
+送信アンテナ数を$N_t$，受信アンテナ数を$N_r$とし，送信信号ベクトル$\mathbf{x}(f)\in \mathbb{C}^{N_t\times 1}$，受信信号ベクトル$\mathbf{y}(f)\in \mathbb{C}^{N_r\times 1}$，チャネル行列$\mathbf{H}(f)\in \mathbb{C}^{N_r\times N_t}$，雑音ベクトル$\mathbf{n}(f)\in \mathbb{C}^{N_r\times 1}$を用いると，入出力関係は次式となる．
+
+\begin{equation}
+\mathbf{y}(f) = \mathbf{H}(f)\mathbf{x}(f) + \mathbf{n}(f) \quad f = 0, 1, \ldots, N_b - 1 .
+\label{eq:wideband_mimo_io}
+\end{equation}
+
+以降，特に断りがない限り，広域MIMOチャネルを対象とする．
+
+\subsection{リソースグリッド}
+\subsubsection{時間・周波数構造}
+前節で述べた広域MIMOチャネルの入出力関係は，あるOFDMシンボルにおける周波数領域の表現である．
+実際の通信では，周波数軸に加えて時間軸にも無線資源が割り当てられる．
+時間と周波数で張られる二次元平面をリソースグリッドと呼ぶ．
+リソースグリッド上の最小単位をリソースエレメントと呼び，REと略記する．REは1本のサブキャリアと1つのOFDMシンボルで定義される．
+通信システムはリソースグリッド上に，ユーザデータ，制御信号，チャネル推定に用いる参照信号を配置して伝送する．参照信号はRSと略記する．時間添字$t$を導入すると，受信信号は$\mathbf{y}(f,t)$と表され，データまたは参照信号が割り当てられたREで観測される．
+
+\begin{figure}[H]
+  \includegraphics[width=100mm]{./img/2nd/2_1_pdf15.pdf}
+  \caption{5G NRにおけるフレーム構造の例（SCSごとのスロット数）\cite{researchgate_5gnr_nr_frame_structure}}
+  \label{fig:2_1}
+\end{figure}
+
+\paragraph{時間方向の構造}
+5G NRでは，時間方向の基本単位として無線フレームを定義し，長さは10 msである．無線フレームはサブフレームへ分割され，サブフレーム長は1 msである．さらにサブフレームはスロットへ分割される．
+サブキャリア間隔を$\Delta f$ [kHz]とすると，スロット長$T_{\mathrm{slot}}$は
+\begin{equation}
+T_{\mathrm{slot}} = 1~\mathrm{ms}\times\frac{15~\mathrm{kHz}}{\Delta f}
+\end{equation}
+と表される．5G NRでは$\Delta f = 15\times 2^{\mu}$ [kHz]とし，$\mu$は0,1,2,\ldots である．このとき$T_{\mathrm{slot}}=1~\mathrm{ms}/2^{\mu}$となる．
+また，OFDMではマルチパス遅延によるシンボル間干渉を抑えるため，サイクリックプレフィクスを付加する．サイクリックプレフィクスはCPと略記する．5G NRではCP長に応じてnormal CPとextended CPを規定しており，normal CPでは1スロットは14個のOFDMシンボル，extended CPでは12個のOFDMシンボルで構成される\cite{3gpp_38211}．
+
+
+\begin{figure}[H]
+  \includegraphics[width=90mm]{./img/2nd/2_2_pdf15.pdf}
+  \caption{5G NRのスロット構造\cite{eladawi_5gnr_slot_format}}
+  \label{fig:2_2}
+\end{figure}
+
+\paragraph{周波数方向の構造}
+周波数方向では，サブキャリアを12本束ねた単位をリソースブロックと呼び，RBと略記する．
+RBにより，スケジューリングや参照信号配置をブロック単位で表せる．
+本論文では，広域MIMOチャネルが周波数選択性をもつことを前提とし，サブキャリアごとに$\mathbf{H}(f,t)$が定義されるものとして扱う．
+
+\subsubsection{TDD方式と参照信号}
+リソースグリッド上の信号配置と送受信のタイミングは，複信方式によって決定される．
+特に5G NR以降の移動体通信システムでは高い周波数帯の利用が進み，上りリンクと下りリンクで同一の周波数帯域を用いて時間方向に通信方向を切り替える方式が広く用いられる．この方式を時分割複信と呼び，TDDと略記する．上りリンクはUL，下りリンクはDLと略記する．
+
+TDDではチャネル状態情報を得るために参照信号を用いる．チャネル状態情報はCSIと略記する．代表例として，DLでは基地局が送信し端末が受信するCSI-RS，ULでは端末が送信し基地局が受信するSRSが挙げられる．
+従来の周波数分割複信では，基地局がCSI-RSを送信し，端末が推定したCSIを基地局へフィードバックする運用が主であった．この方式をFDDと略記する．
+
+\begin{figure}[H]
+  \includegraphics[width=100mm]{./img/2nd/2_4_pdf15.pdf}
+  \caption{TDDとFDDの概念図\cite{policytracker_fdd_glossary}}
+  \label{fig:2_4}
+\end{figure}
+
+
+\subsubsection{チャネル相反性とSRSの活用}
+TDDでは送受信に同一の周波数を用いるため，ULとDLの電波伝搬特性が等価とみなせる場合がある．この性質をチャネル相反性と呼ぶ．
+チャネル相反性が成り立つ条件では，基地局は端末からCSIのフィードバックを受けずに，ULで受信したSRSに基づいてDLのチャネル状態を推定できる．
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{./img/2nd/2_3_pdf15.pdf}
+  \caption{ CSI-RSとSRSの通信方向 （文献\cite{dongre2022implicit_channel_coordination}より）}
+  \label{fig:2_3}
+\end{figure}
+
+
+% \subsection{OFDMリソースグリッドの定義}
+% 広域チャネルの扱いでは，OFDMにより周波数軸をサブキャリアに分割し，時間軸をOFDMシンボルに分割する表現が一般的である．
+% 周波数軸の添字を$f$，時間軸（OFDMシンボルまたはスロット）の添字を$t$とすれば，広域MIMOチャネルは$\mathbf{H}(f,t)$のように表される．
+% 受信信号はサブキャリアごとに次式で表される．
+% \begin{equation}
+% \mathbf{y}(f,t) = \mathbf{H}(f,t)\mathbf{x}(f,t) + \mathbf{n}(f,t)
+% \end{equation}
+
+% OFDMのリソースグリッド上には，ユーザデータに加え，チャネル推定や同期に用いる参照信号（パイロット）が配置される．
+% 5G NRでは，データチャネルに埋め込まれるDMRS（Demodulation Reference Signal）や，測定用途のCSI-RS等を用いる．
+
+% \subsection{参照信号が疎になる状況}
+% 参照信号は送信電力と時間周波数リソースを消費するため，高密度に送信すればデータスループットが低下する．
+% さらに，多数ユーザの多重やビーム運用では参照信号設計が複雑化し，参照信号を送信するタイミングや周期には制約が生じる．
+% その結果，実運用では，全ての時刻$t$で$\mathbf{H}(f,t)$を参照信号から直接推定できるとは限らない．
+
+% 本論文では，参照信号が送信される時刻では推定値$\hat{\mathbf{H}}(f,t)$が得られるとする．
+% 参照信号が送信されない時刻では，推定値が欠落する．
+% 以降，特に断りがない限り，サブキャリア方向を必要に応じて集約したCSI系列$\{\hat{\mathbf{H}}(t)\}$を入力とする時系列予測を扱う．
+
+\subsection{チャネル推定}
+\subsubsection{パイロット観測モデル}
+参照信号が送信されるREに着目する．送信参照信号を$\mathbf{X}(f,t)$，受信信号を$\mathbf{Y}(f,t)$とする．ここで$\mathbf{X}(f,t)$と$\mathbf{Y}(f,t)$は，参照信号が割り当てられた複数のREをまとめた行列表現である．
+\begin{equation}
+\mathbf{Y}(f,t) = \mathbf{H}(f,t)\mathbf{X}(f,t) + \mathbf{N}(f,t)
+\label{eq:channel_estimation_pilot}
+\end{equation}
+と表される．$\mathbf{X}(f,t)$は既知である．$\mathbf{N}(f,t)$は受信雑音であり，熱雑音に起因する加法性白色ガウス雑音としてモデル化する場合が多い．以降，加法性白色ガウス雑音をAWGNと略記する．
+チャネル推定とは，既知の参照信号と受信信号から$\mathbf{H}(f,t)$を推定することである．以降で述べるプリコーディングとビームフォーミングの設計では，推定されたチャネル状態情報が用いられる．
+
+\subsubsection{最小二乗推定}
+単一のサブキャリアに着目して説明する．
+送信側が既知の参照信号ベクトル$\mathbf{x}(f,t)\in\mathbb{C}^{N_t\times 1}$を送信し，受信側が$\mathbf{y}(f,t)\in\mathbb{C}^{N_r\times 1}$を観測する場合を考える．複素数体を$\mathbb{C}$で表す．
+このとき，式\ref{eq:channel_estimation_pilot}は次式のように書き換えられる．
+\begin{equation}
+\mathbf{y}(f,t) = \mathbf{H}(f,t)\mathbf{x}(f,t) + \mathbf{n}(f,t)
+\end{equation}
+である．
+
+参照信号を時間方向に並べた行列$\mathbf{X}(f,t)$と，対応する受信信号行列$\mathbf{Y}(f,t)$を用いると，観測モデルは式\ref{eq:channel_estimation_pilot}で表される．
+ここでは，$f,t$を固定し，既知の$\mathbf{X}(f,t)$と観測$\mathbf{Y}(f,t)$から未知のチャネル行列$\mathbf{H}(f,t)$を推定する．
+最小二乗推定は，観測とモデルの差である残差が最も小さくなる$\mathbf{H}$を選ぶ推定である．以降，最小二乗推定をLS推定と略記する．
+LS推定は次の最適化問題として定式化される．
+\begin{equation}
+\hat{\mathbf{H}}_{\mathrm{LS}}(f,t)
+=\arg\min_{\mathbf{H}}
+\left\|\mathbf{Y}(f,t)-\mathbf{H}\mathbf{X}(f,t)\right\|_{\mathrm{F}}^2
+\end{equation}
+ここで$\hat{\mathbf{H}}_{\mathrm{LS}}(f,t)$は$\mathbf{H}(f,t)$のLS推定値である．$\hat{\cdot}$は推定値を表し，添字LSは最小二乗推定を表す．$\arg\min$は目的関数を最小にする$\mathbf{H}$を表す．$\|\cdot\|_{\mathrm{F}}$はフロベニウスノルムである．記号$(\cdot)^{\mathrm{H}}$は共役転置である．
+
+参照信号が適切に設計され，$\mathbf{X}(f,t)\mathbf{X}(f,t)^{\mathrm{H}}$の逆行列が存在するとき，LS推定値は
+\begin{equation}
+\hat{\mathbf{H}}_{\mathrm{LS}}(f,t)
+=\mathbf{Y}(f,t)\mathbf{X}(f,t)^{\mathrm{H}}
+\left(\mathbf{X}(f,t)\mathbf{X}(f,t)^{\mathrm{H}}\right)^{-1}
+\label{eq:ls_solution}
+\end{equation}
+と表される．
+
+\subsubsection{LMMSE推定}
+LS推定は単純である一方，雑音や事前統計を考慮しないためSNRが低い場合に推定誤差が大きくなる．チャネルの相関や雑音分散などの統計情報が得られる場合，LMMSE推定により推定誤差を低減できる．
+事前統計とは，観測$\mathbf{Y}(f,t)$とは独立に既知である確率的性質である．例として，受信雑音の分散，チャネルの平均電力，時間方向，周波数方向，空間方向の相関が挙げられる．
+
+\paragraph{LMMSE推定の導出}
+LS推定は観測$\mathbf{Y}(f,t)$と既知の$\mathbf{X}(f,t)$だけから$\mathbf{H}(f,t)$を求めるため，雑音が大きい場合に推定誤差が増大しやすい．
+そこで事前統計を利用し，推定誤差の平均二乗誤差を小さくすることを考える．線形最小平均二乗誤差推定をLMMSE推定と略記する．
+式\ref{eq:channel_estimation_pilot}に対して，次の評価関数を最小化する．期待値を$\mathbb{E}[\cdot]$で表し，本節では受信雑音に関する平均として扱う．
+\begin{equation}
+\mathbb{E}\left[\left\|\mathbf{Y}(f,t)-\mathbf{H}(f,t)\mathbf{X}(f,t)\right\|_{\mathrm{F}}^2\right]
+\end{equation}
+この評価関数を$\mathbf{H}(f,t)$で微分し$0$とおくと，
+\begin{equation}
+\hat{\mathbf{H}}(f,t)\,\mathbb{E}\left[\mathbf{X}(f,t)\mathbf{X}(f,t)^{\mathrm{H}}\right]
+=\mathbb{E}\left[\mathbf{Y}(f,t)\mathbf{X}(f,t)^{\mathrm{H}}\right]
+\end{equation}
+が得られる．したがって，
+\begin{equation}
+\hat{\mathbf{H}}_{\mathrm{LMMSE}}(f,t)
+=\mathbb{E}\left[\mathbf{Y}(f,t)\mathbf{X}(f,t)^{\mathrm{H}}\right]
+\left(\mathbb{E}\left[\mathbf{X}(f,t)\mathbf{X}(f,t)^{\mathrm{H}}\right]\right)^{-1}
+\label{eq:lmmse_simple}
+\end{equation}
+と表される．
+なお，$\mathbb{E}\left[\mathbf{X}\mathbf{X}^{\mathrm{H}}\right]$は参照信号の自己相関行列，$\mathbb{E}\left[\mathbf{Y}\mathbf{X}^{\mathrm{H}}\right]$は受信信号と参照信号の相互相関行列に対応する．
+
+\subsection{プリコーディング}
+\subsubsection{プリコーディングとデコーディング}
+送信側で信号に重みを乗じ，所望の信号を受信側で得やすくする処理をプリコーディングと呼ぶ．単一のサブキャリアに着目し，表記を簡単のため添字$f,t$を省略する．所望の送信シンボルベクトルを$\mathbf{s}\in\mathbb{C}^{N_s\times 1}$，送信アンテナ数を$N_t$，受信アンテナ数を$N_r$とする．送信側ではプリコーディング行列$\mathbf{P}\in\mathbb{C}^{N_t\times N_s}$を用いて
+\begin{equation}
+\mathbf{x}=\mathbf{P}\mathbf{s}
+\label{eq:prec_model_x}
+\end{equation}
+とし，受信信号は
+\begin{equation}
+\mathbf{y}=\mathbf{H}\mathbf{P}\mathbf{s}+\mathbf{n}
+\label{eq:prec_model_y}
+\end{equation}
+と表される．ただし$\mathbf{H}\in\mathbb{C}^{N_r\times N_t}$はチャネル行列，$\mathbf{n}\in\mathbb{C}^{N_r\times 1}$は受信雑音である．
+受信側で線形復元を行う場合，等化行列をデコーディング行列と呼び，$\mathbf{D}\in\mathbb{C}^{N_s\times N_r}$で表す．このとき
+\begin{equation}
+\mathbf{r}=\mathbf{D}\mathbf{y}
+\label{eq:prec_model_r}
+\end{equation}
+と定義する．移動体通信の下りリンクでは端末の複雑さを抑えるため，送信側のプリコーディングのみを主に用いる運用も多い．以下では，$\mathbf{P}$および$\mathbf{D}$の代表的な設計を示す．重みは推定チャネル$\hat{\mathbf{H}}$に基づいて計算されるが，表記を簡単のため$\mathbf{H}$と書く．
+
+\subsubsection{最小二乗基準}
+\paragraph{最小二乗基準に基づくプリコーディング}
+雑音が無視できると仮定すると，所望信号$\mathbf{s}$を得るには$\mathbf{H}\mathbf{P}\mathbf{s}\approx\mathbf{s}$，すなわち$\mathbf{H}\mathbf{P}\approx\mathbf{I}$となる$\mathbf{P}$が望ましい．そこで
+\begin{equation}
+\min_{\mathbf{P}}\left\|\mathbf{H}\mathbf{P}-\mathbf{I}\right\|_{\mathrm{F}}^2
+\label{eq:prec_ls_obj}
+\end{equation}
+を考える．$\mathbf{H}$が行フルランクであり$N_t\ge N_r$が成り立つとき，式\eqref{eq:prec_ls_obj}の解はチャネルの擬似逆行列で与えられ，
+\begin{equation}
+\mathbf{P}_{\mathrm{LS}}=\mathbf{H}^{+}
+=\mathbf{H}^{\mathrm{H}}\left(\mathbf{H}\mathbf{H}^{\mathrm{H}}\right)^{-1}
+\label{eq:prec_ls}
+\end{equation}
+となる．この解はゼロフォーシングプリコーディングとして知られ，ZFと略記する．ZFは干渉を抑圧できる一方，$\mathbf{H}\mathbf{H}^{\mathrm{H}}$の条件数が大きい場合に雑音が増幅しやすい．
+
+\paragraph{最小二乗基準に基づくデコーディング}
+同様に，受信側で$\mathbf{r}=\mathbf{D}\mathbf{y}$により$\mathbf{x}$を復元したい場合，$\mathbf{D}\mathbf{H}\approx\mathbf{I}$となる$\mathbf{D}$を
+\begin{equation}
+\min_{\mathbf{D}}\left\|\mathbf{D}\mathbf{H}-\mathbf{I}\right\|_{\mathrm{F}}^2
+\label{eq:dec_ls_obj}
+\end{equation}
+から求められる．$\mathbf{H}$が列フルランクであり$N_r\ge N_t$が成り立つとき
+\begin{equation}
+\mathbf{D}_{\mathrm{LS}}=\left(\mathbf{H}^{\mathrm{H}}\mathbf{H}\right)^{-1}\mathbf{H}^{\mathrm{H}}
+\label{eq:dec_ls}
+\end{equation}
+となる．
+
+\subsubsection{最小平均二乗誤差基準}
+\paragraph{雑音を考慮したプリコーディング}
+ZFは雑音を考慮しないため，SNRが低い場合に性能が劣化しやすい．雑音の影響を抑えるため，ZFの目的関数に正則化項を加えた
+\begin{equation}
+\min_{\mathbf{P}}\left\|\mathbf{H}\mathbf{P}-\mathbf{I}\right\|_{\mathrm{F}}^2+\alpha\left\|\mathbf{P}\right\|_{\mathrm{F}}^2
+\label{eq:prec_lmmse_obj}
+\end{equation}
+を用いる．$\alpha$は雑音分散や送信SNRに基づく正則化係数である．式\eqref{eq:prec_lmmse_obj}を$\mathbf{P}$で偏微分して$0$とおくと
+\begin{equation}
+\mathbf{H}^{\mathrm{H}}(\mathbf{H}\mathbf{P}-\mathbf{I})+\alpha\mathbf{P}=\mathbf{0}
+\end{equation}
+となり，よって
+\begin{equation}
+\mathbf{P}_{\mathrm{LMMSE}}
+=\mathbf{H}^{\mathrm{H}}\left(\mathbf{H}\mathbf{H}^{\mathrm{H}}+\alpha\mathbf{I}\right)^{-1}
+\label{eq:prec_lmmse}
+\end{equation}
+が得られる．$\alpha\to 0$で式\eqref{eq:prec_ls}に一致する．この形は正則化ZFとも呼ばれる．
+
+\subsection{ビームフォーミング}
+\subsubsection{MIMOにおけるビームフォーミングの位置づけ}
+複数の送受信アンテナを用いる多入力多出力伝送をMIMOと略記する．MIMOがもたらす利得は，空間多重，空間多様性，ビームフォーミングに整理できる．空間多重は複数ストリームを同時に送信してスループットを向上させる．空間多様性は同一情報を冗長に分散してフェージングの影響を低減する．ビームフォーミングは所望ユーザ方向の有効利得を高め，他ユーザ方向への漏洩を抑える．
+まず空間多重では，送信ストリーム数$N_s$を$N_s>1$として，式\eqref{eq:prec_model_x}のプリコーディング行列$\mathbf{P}\in\mathbb{C}^{N_t\times N_s}$により複数ストリームを同時送信する．
+受信側では式\eqref{eq:prec_model_y}のように$\mathbf{H}\mathbf{P}$を通じてストリーム間干渉が生じ得るため，ZFやLMMSE等の設計により干渉を抑えつつ所望信号を復元する必要がある．
+一方，空間多様性は，同一情報をアンテナ，時間，周波数に冗長に分散して送ることで，深いフェージングの影響を平均化し，誤り率を改善する考え方である．
+本節で扱うビームフォーミングはプリコーディングの特殊形として理解でき，単一ストリームであり$N_s=1$のときに典型的に現れる．
+
+\subsubsection{ビームフォーミングの基本}
+ビームフォーミングは，複数アンテナの送信信号に位相と振幅の重みを付与し，空間的に特定方向の電力を強める送信方式である．単一ストリームであり$N_s=1$のとき，式\eqref{eq:prec_model_x}の$\mathbf{P}$はベクトル$\mathbf{w}\in\mathbb{C}^{N_t\times 1}$に退化し，
+\begin{equation}
+\mathbf{x}=\mathbf{w}s
+\end{equation}
+と書ける．受信側の有効チャネルは$\mathbf{H}\mathbf{w}$となり，$\mathbf{w}$を適切に選べば所望ユーザのSNRを高められる．
+代表例として，単一ユーザで雑音が支配的な場合には最大比送信が用いられる．最大比送信をMRTと略記し，
+\begin{equation}
+\mathbf{w}_{\mathrm{MRT}}=\frac{\mathbf{h}^{\mathrm{H}}}{\|\mathbf{h}\|_2}
+\end{equation}
+を用いる．ここで$\mathbf{h}\in\mathbb{C}^{1\times N_t}$は当該ユーザのチャネル行ベクトルである．MRTはチャネルと同位相で送信してアレー利得を得る一方，多ユーザでは他ユーザへの干渉を考慮する必要がある．
+いずれの設計でも，$\mathbf{w}$の計算にはCSIが必要である．CSIの時間変動に追従できない場合，ビームの指向が外れて受信品質が劣化する．
+
+\subsubsection{単一ユーザにおけるMIMOビームフォーミング}
+単一ユーザの$N_s>1$ストリーム送信では，$\mathbf{w}$を1本選ぶ代わりに，$\mathbf{P}$の列ベクトルとして複数本のビームを設計する．この単一ユーザMIMOをSU-MIMOと略記する．
+代表的な理論モデルとしてチャネルの特異値分解を用いる．特異値分解をSVDと略記し，
+\begin{equation}
+\mathbf{H}=\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^{\mathrm{H}}
+\end{equation}
+を用いると，$\mathbf{V}$の列ベクトルは送信側の直交ビームを与える．
+例えば上位$N_s$本の固有モードを用いる場合，
+\begin{equation}
+\mathbf{P}=\mathbf{V}_{(:,1:N_s)},\quad
+\mathbf{D}=\mathbf{U}_{(:,1:N_s)}^{\mathrm{H}}
+\end{equation}
+とおけば，理想化した条件下でストリーム間干渉を抑えた並列チャネルに分解できる．
+この観点から，単一ストリームのビームフォーミングはSU-MIMOで$N_s=1$の場合に対応する．
+実システムでは，完全なCSIの取得や無制限のデジタル自由度は仮定できないため，アナログ，デジタル，ハイブリッドといった実装制約の下でビーム設計が行われる．
+
+
+
+\section{チャネル予測の動作原理}
+本節では，CSIを将来時刻へ外挿するCSI予測を扱う．
+まず，5Gの進展に伴ってCSIの取得と更新が抱える課題を整理し，CSI予測が必要となる背景を述べる．
+次に，CSI予測の代表的な枠組みを概観した上で，時系列CSI予測に焦点を当てて関連手法を整理する．
+
+
+5Gでは高周波数帯の利用や高密度化が進み，基地局は多数のアンテナ素子を用いた大規模MIMOにより，空間多重とビーム運用で容量を確保する．大規模MIMOをmMIMOと略記する．
+前節で述べたプリコーディングやビームフォーミングの設計にはCSIが不可欠であり，CSIの誤差はビームの指向ずれや干渉増大として性能劣化に直結する．
+一方で，アンテナ素子数や同時接続ユーザ数の増加に伴い，CSIの次元と更新頻度の要求が増大する．
+参照信号の送信やフィードバックを高頻度化すれば推定精度は向上するが，時間周波数リソースと送受信電力を消費し，データ伝送に割ける資源を圧迫する．
+多ユーザかつ多ビームの運用では測定，推定，重み更新の計算負荷も増大し，実装面の制約が顕在化する．
+加えて，移動や遮蔽物により無線チャネルが時間変動する環境では，推定から利用までの遅延によりCSIが陳腐化するチャネルエイジングが問題となる．
+チャネルエイジングはmMIMOのようにビームが鋭い系ほど影響が大きく，追従遅れがリンク品質の低下を招く．
+以上より，CSIの推定精度を高めるほど参照信号等のオーバーヘッドが増大するため，精度と更新コストの両立が課題となる．
+追加の無線リソース投入を抑えつつ将来のCSIを推定し，実効的なCSI品質を改善する手段としてCSI予測が研究されている．
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=120mm]{../picture/3nd/3_2_pdf15.pdf}
+  \caption{チャネルエイジングの例\cite{jiang2022_transformer_mobility_negligible}}
+  \label{fig:3_2}
+\end{figure}
+
+
+
+\section{関連研究}
+CSI予測とは，観測済みのCSIから未観測のCSIを推定する枠組みである．
+未観測の対象は，将来時刻のCSIに限らず，異なる周波数帯域のCSIや，圧縮により欠落した成分を含む場合がある．
+本節では，既存研究で用いられる代表的な分類を整理し，本章で扱う範囲を明確にする．
+
+\subsubsection{周波数方向のCSI予測}
+前節で述べたように，FDD方式ではULとDLの周波数帯域が異なるため，TDDのようなチャネル相反性を直接には利用できない．
+一方で，散乱体配置，到来角，出発角などの幾何学的パラメータは，近接する周波数帯域で共通性をもつ場合がある．
+周波数方向のCSI予測は，この共通性に基づき，ULで得られる情報からDLのCSIを推定することを目的とする．
+推定は，伝搬パラメータを介してDLのCSIを再構成するモデルに基づく方法や，ULとDLの対応をデータから学習する方法として定式化されることが多い．
+
+\subsubsection{CSIフィードバック圧縮}
+FDD方式では端末がCSI-RS等からDLのCSIを推定し，基地局へフィードバックする運用が基本となる．端末をUE，基地局をBSと略記する．
+mMIMOではCSIの次元が大きく，フィードバック量が無線リソースを圧迫する．
+UE側でCSIを低次元表現へ圧縮して送信し，BS側で復元する枠組みが提案されている\cite{li2019_dl_mimo_csi_feedback}．
+符号帳に基づく量子化に加え，疎性や低ランク性を仮定した圧縮，自己符号化器を用いたデータ駆動の圧縮も検討されている．
+フィードバック圧縮は時間方向の外挿ではないが，限られた無線リソースでBSが利用可能なCSI品質を維持するという観点で，本章の課題設定と密接に関係する．
+
+\subsubsection{時系列CSI予測}
+時系列CSI予測は，同一の周波数帯域におけるCSI系列から，将来時刻のCSIを推定する枠組みである．
+参照信号が疎である場合や，推定と重み更新に遅延が生じる場合に，チャネルエイジングの影響を緩和する手段として位置づけられる．
+アンテナ素子数や同時接続ユーザ数の増加によりCSI更新要求が厳しくなる状況では，参照信号密度を過度に高めずにビーム重みを更新するための補助手段となり得る．
+特に，触覚インターネットや自動運転など低遅延アプリケーションの普及に伴いミリ波帯の利用が進む場合，TDD運用を前提としたシステム設計が想定され，時間方向のCSI外挿は実装上の親和性が高い．
+3GPPの技術報告でもCSIフィードバック遅延の影響評価や予測に基づくリンク適応が議論されており\cite{3gpp_38821}，時系列CSI予測の重要性は今後さらに高まると考えられる．
+以降では，この時系列CSI予測に焦点を当て，代表的手法と課題を整理する．
+
+\begin{figure}[H]
+  \includegraphics[width=80mm]{../picture/3nd/3_1_pdf15.pdf}
+  \caption{時系列CSI予測の例\cite{zhu2019_adaptive_parameter_free_rnn}}
+  \label{fig:3_1}
+\end{figure}
+
+
+
+\subsubsection{時系列CSI予測研究の潮流}
+古典的には，ウィナーフィルタやカルマンフィルタに基づく推定としてCSI予測が定式化されてきた\cite{wiener1949extrapolation,arya2018_kalman_channel_aging}．
+ただし，これらはチャネルの統計モデルや状態空間モデルの仮定に依存し，実環境との不整合が性能劣化につながる場合がある．
+時系列CSI予測は，参照信号の送受信やフィードバックの頻度を下げても，予測によりCSIの陳腐化を補償できる点に利点がある．
+参照信号のオーバーヘッドを抑えれば，データ伝送に割ける時間周波数資源が増加し，実効スループットの向上に寄与する．
+この観点から，近年は深層学習を用いてチャネルの時間変動をデータから学習する手法が提案されている\cite{zhang2021_cv3dcnn}．
+
+深層学習に基づく時系列CSI予測では，複素値表現を直接扱うモデル，再帰構造により時間相関を捉えるモデル，畳み込みにより局所的な構造を抽出するモデルなどが提案されている．
+複素数ニューラルネットワークを用いて周波数領域でフェージングチャネルを予測する手法が報告されている\cite{ding2013_cvnn_fading}．
+RNNを用いた周波数領域チャネル予測をMIMO-OFDMへ適用した研究では，多ステップ予測の枠組みが示され，カルマンフィルタとの比較も行われている\cite{jiang2019_rnn_freqdomain_prediction}．
+大規模MIMOにおけるチャネルエイジング下では，機械学習に基づく予測により，予測品質とユーザスループットの観点で改善が示されている\cite{yuan2020_ml_channel_prediction_aging}．
+注意機構を導入して時系列内の重要な時刻へ重み付けする手法も検討されている\cite{zheng2023_attention_fading_prediction}．
+Transformerを用いる手法では自己注意機構と並列処理により，マルチステップ予測における誤差伝播の抑制を狙った設計が提案されている\cite{jiang2022_transformer_mobility_negligible}．
+
+
+\subsubsection{時系列CSI予測の環境適応}
+時系列CSI予測は，学習時と運用時で環境が同一である前提として評価される場合が多い．
+基地局配置，周波数帯，散乱特性，移動速度が変化すると，訓練分布とテスト分布が不一致となり，予測誤差が増大する．
+セル内の建造物の増減や時間帯に伴うユーザ密度の変化も，遮蔽や干渉環境を変化させ，同様の分布不一致を生じさせる．
+以上より，時系列CSI予測モデルには，少量データでの高速適応や運用中の分布変化に対する性能維持を含む環境適応が求められる．
+
+従来のCSI予測モデルの環境適応に関する研究では，少量データでの適応を狙い，メタ学習に基づく初期化の学習が検討されている．
+Kimらは，複数環境でメタ学習により初期モデルを学習し，新環境では少数サンプルで微調整する枠組みを示した\cite{kim2023_meta_denoising_mimo}．
+低SNR環境では，深層画像事前分布に基づく前処理を併用し，観測雑音の影響を低減した上で予測する設計としている\cite{kim2023_meta_denoising_mimo}．
+
+事前学習済みモデルの転用は，環境変化に対する汎化を狙う方向性である．
+Liuらは，大規模言語モデルをCSI予測へ適用し，少量データ学習と未学習環境での性能を評価した\cite{liu2024_llm4cp}．
+運用中の分布変化に対しては，継続学習により逐次追従する枠組みも提案されている\cite{mohsin2025_continual_learning_channel_prediction}．
+
+
+
+
+\section{おわりに}
+\subsection{本章のまとめ}
+本章では，5G NR物理層におけるチャネル予測の基礎と背景を整理した．
+まず，帯域幅とアンテナ数の観点からチャネルモデルを分類し，狭域SISOから広域MIMOへ至る入出力関係を定式化した．
+OFDMリソースグリッドとTDD運用を概観し，参照信号に基づくCSI取得の前提を明確にした．
+チャネル推定では，LS推定とLMMSE推定を示し，推定に必要な既知参照信号，雑音，事前統計の関係を整理した．
+プリコーディングでは，ZFと正則化ZFを取り上げ，チャネル行列の性質が雑音増幅や干渉抑圧に影響する点を述べた．
+ビームフォーミングでは，単一ストリームのMRTとSU-MIMOにおけるSVDに基づく固有モード伝送を例に，重み計算にCSIが不可欠であることを確認した．
+
+続いて，CSI予測の動作原理として，5Gの進展に伴うCSI取得と更新の課題，およびチャネルエイジングの問題を整理した．
+関連研究では，周波数方向のCSI予測，CSIフィードバック圧縮，時系列CSI予測の三つの枠組みを概観し，本論文では時系列CSI予測に焦点を当てることを述べた．
+時系列CSI予測の環境適応に関しては，メタ学習に基づく初期化学習\cite{kim2023_meta_denoising_mimo}，大規模言語モデルの転用\cite{liu2024_llm4cp}，継続学習による逐次追従\cite{mohsin2025_continual_learning_channel_prediction}などの研究を紹介した．
+
+既存研究の多くは，新環境で得られる正解データを用いたモデル更新を前提としている．
+一方，時系列CSI予測で参照信号を削減する場合，予測スロットでは参照信号を送信しないため，予測対象時刻のCSI推定値が得られない．
+正解ラベルを獲得できなければ教師あり学習に基づく損失を計算できず，予測を継続しながら逐次的にモデルを更新することが困難となる．
+
+具体例として，時刻$t$のCSI推定値を$\bm{H}_t$，予測値を$\widehat{\bm{H}}_t$とする．
+3入力1出力の予測モデルを運用する場合，$\bm{H}_t, \bm{H}_{t+1}, \bm{H}_{t+2}$から$\widehat{\bm{H}}_{t+3}$を得る．
+参照信号を削減する予測スロットでは，時刻$t+3$の推定値$\bm{H}_{t+3}$を獲得できない．
+$\widehat{\bm{H}}_{t+3}$に対する教師信号が欠落し，更新用の学習データを逐次獲得できない．
+結果として運用で基地局が利用できるCSI系列は推定値と予測値が混在する系列となる．
+
+この混在系列を用いてモデルを更新する方法として，三つの方針が考えられる．
+第1の方針は，一時的に予測を停止し，参照信号を送信して全時刻の推定値を揃えた後に更新するものである．
+参照信号削減という時系列CSI予測の目的に反するうえ，更新までの遅延も増大する．
+運用中にモデルを停止する場合，停止と再開の手順，許容中断時間，遅延を考慮した運用方針を設計する必要がある．
+3GPPではAIモデルのライフサイクル管理に関する要件を議論しているが，モデルの有効化と無効化，切り替え時の遅延の扱いは策定途上にある\cite{3gpp_tr38843,nokia_aiml_ran,arxiv_3gpp_standardization}．
+産業界ではAI-RANとして無線アクセスネットワークにAIモデルを組み込む次世代アーキテクチャが議論されているが，フォールバック機構の設計指針は確立されていない\cite{wia_challenges}．
+以上より，第1の方針は参照信号削減の利点を損なうだけでなく，実運用における実現可能性にも課題を残す．
+
+第2の方針は，予測対象時刻の正解ラベルを用いて更新するものである．
+参照信号削減下では$\bm{H}_{t+3}$を獲得できないため，予測値との間の損失計算が成り立たず，教師あり学習ができない．
+他分野では観測や正解データが継続的に得られるため，データ同化\cite{kalnay2003_atmospheric_modeling,evensen2003_enkf}やオンライン学習\cite{cover1991_universal_portfolios}により逐次更新する枠組みが一般的である．
+しかし，時系列CSI予測では予測スロットで参照信号を送らないため，この枠組みを直接適用できない．
+
+第3の方針は，入力に予測値を含め，次に推定値が得られる時刻を正解ラベルとして更新するものである．
+例えば$\bm{H}_{t+1}, \bm{H}_{t+2}, \widehat{\bm{H}}_{t+3}$から$\bm{H}_{t+4}$を学習する．
+この場合は，入力に予測誤差が混入し，誤差蓄積による性能劣化を招く可能性が指摘されている\cite{jiang2022_transformer_mobility_negligible}．
+
+参照信号削減を前提とする時系列CSI予測の運用では，推定値と予測値が混在するCSI系列から，モデルを更新する枠組みが必要となる．
+第1の方針は参照信号削減の目的と整合せず，標準化検討途上である運用手順の設計負担も大きい．
+本論文では，第2および第3の方針が想定する状況を対象として，予測を継続したまま欠損する正解ラベルを扱いながらモデルを更新する問題に取り組む．
+
+

@@ -1,0 +1,54 @@
+
+
+
+
+2nd
+各2.Nなどの数字は文章中に"ここに図2_N"と記述しているのでその部分に挿入する
+
+参考URLまたは論文は
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/master_thesis/bib/reference.bib
+に文献引用（bibliographic citation）BibTeX（ビブテック）による文献管理・引用をしたいのでまとめてください
+IEEE citation style（IEEEスタイル）でお願いします
+
+挿入する図:
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/master_thesis/img
+に2nd,3nd,4dn,5ndの図が入っているため指定したものを挿入してください
+
+
+
+
+2.1 
+参考URLまたは論文
+https://www.researchgate.net/figure/llustration-of-the-5G-NR-frame-structure-depicting-the-number-of-slots-per-subframe-for_fig1_372516812
+
+挿入する図
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/master_thesis/img/2nd/2_1.pdf
+挿入する図の位置 
+
+2.2 
+参考URLまたは論文
+https://www.mohamedeladawi.com/5g-nr-slot-format-deep-dive-2/?utm_source=chatgpt.com#google_vignette
+挿入する図
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/master_thesis/img/2nd/2_2.pdf
+挿入する図の位置
+
+
+2.3 
+
+参考URLまたは論文
+S. Dongre and H. Rahbari, “Implicit Channel Coordination to Tackle Starvation
+Attacks in 5G and Wi-Fi Coexistence Systems,” Proc. GLOBECOM 2022 - 2022
+IEEE Global Communications Conference, pp. 4136–4141, Dec. 2022.
+
+挿入する図
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/master_thesis/img/2nd/2_3.pdf
+挿入する図の位置
+
+
+
+2.4
+参考URLまたは論文は
+https://www.policytracker.com/glossary/fdd/
+
+挿入する図:
+/Users/matsuhashiyu/Desktop/master_thesis/master_s_thesis__wpt_/master_thesis/img/2nd/2_4.pdf

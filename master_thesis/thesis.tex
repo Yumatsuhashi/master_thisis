@@ -1,0 +1,182 @@
+%#!make thesis.dvi
+\documentclass[platex,a4paper,report,12pt,dvipdfmx]{jsbook}
+%\documentclass[draft,a4paper,report,12pt]{jsbook}
+% 執筆中はdraft↑を入れた方が速い
+%\documentclass[english,draft,a4paper,report,12pt]{jsbook}
+% ↑for English writing
+
+%% amsmathを使う場合はthesisより前に読み込む
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath}
+\usepackage{thesis}
+\usepackage{mediabb}
+%\usepackage{newenum}
+%\usepackage{epsfig}
+%\usepackage{listings}
+%\usepackage{url}
+%\usepackage{fancyhdr}
+% \usepackage{subfigure}
+%\usepackage[dvipdfm]{graphicx}
+\usepackage{cite}
+\usepackage{bm}
+\usepackage{afterpage}
+%\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage {colortbl,array,xcolor}
+\usepackage{url}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{float} % figureの[H]指定を使う
+
+%------------------------------
+%\hyperref
+%  日本語の文字コード設定が分からない人はコメントアウトすること．
+%------------------------------
+% PDF化したときにしおりが作成され，図表へのジャンプも可能となる．
+%\usepackage{atbegshi}
+% Mac/Linuxの場合
+
+%   ※Ubuntuの場合はEUC-UCS2を自分で入れないとダメ．
+%\AtBeginShipotutFirst{\special{pdf:tounicode EUC-UCS2}}
+%% Winの場合
+%\AtBeginShipoutFirst{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
+% 以下は共通
+\usepackage{comment}
+\usepackage{fancyhdr}
+\usepackage[a4paper,bookmarks,bookmarksnumbered,%
+ bookmarksopen=false,pdfstartview={FitH},%
+ bookmarkstype=toc,%
+ setpagesize=false,%
+ pdfauthor={37-246529 },%
+ pdftitle={thesis}]{hyperref}
+
+%----------------------------------------------------------------------
+% 設定
+%----------------------------------------------------------------------
+% 設定ファイルの読み込み
+\input{setting}
+% マクロファイルの読み込み
+\input{mymacro}
+
+\pagestyle{footandheadings}
+\pagenumbering{roman}
+\setcounter{tocdepth}{3}
+
+% 目次の深さはsubsectionまで
+\setcounter{tocdepth}{2}
+
+%ここでページのヘッダーを編集
+\pagestyle{fancy}
+\lhead{\rightmark}
+\cfoot{\thepage}
+\setlength{\headheight}{16pt}
+\renewcommand{\chaptermark}[1]{\markboth{第\  \normalfont\thechapter\ 章~~#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection #1}{}}
+\lhead{}
+\newcommand{\bs}{\symbol{'134}}
+\newcommand{\Cmd}[1]{\texttt{\def\{{\char`\{}\def\}{\char`\}}\bs#1}}
+
+\pagenumbering{roman}
+
+% 基準となる図の幅
+\newlength\figurewidth
+\setlength{\figurewidth}{0.8\textwidth}
+% 縦に並べた図の間の基準となるスペース
+\newlength\figuresep
+\setlength{\figuresep}{0.3\floatsep}
+
+
+%----------------------------------------------------------------------
+% タイトル
+%----------------------------------------------------------------------
+\title{\huge AI-RAN実用化に向けた\\ 
+\vspace{-0.3cm}
+時系列的CSI予測\\
+環境適応機構の構築
+
+}
+\subtitle{}
+
+\ID{37-246529}
+\author{テスト}
+\professor{森川 博之 教授}
+\professorii{}
+\faculty{東京大学大学院工学系研究科}
+\department{電気系工学専攻}
+\date{2025年1月27日}
+
+
+% ↓includeonlyを活用すると処理が速いので書いてる途中はお勧め．
+% \includeonly{1st,2nd, acknowledge}
+
+%----------------------------------------------------------------------
+% 本文
+%----------------------------------------------------------------------
+\begin{document}
+\include{title}
+\pagenumbering{arabic}
+\newpage
+\renewcommand{\baselinestretch}{1}
+
+
+%----------------------------------------------------------------------
+% 中身
+%----------------------------------------------------------------------
+%序論
+\include{1st}
+
+% 背景, 先行研究
+\include{2nd}
+
+% ループアンテナ理論に基づく漏洩磁界低減手法(提案手法原理)
+\include{3rd}
+
+% 電磁界シミュレーション評価
+\include{4th}
+
+%保留
+% \include{6th}
+
+%----------------------------------------------------------------------
+% 結論
+%----------------------------------------------------------------------
+\include{conclu}
+
+
+%----------------------------------------------------------------------
+% 謝辞
+%----------------------------------------------------------------------
+\include{acknowledge}
+
+
+%----------------------------------------------------------------------
+% 参考文献
+%----------------------------------------------------------------------
+% 本文に \cite がまだ無い段階でも pbibtex が失敗しないようにする。
+% 章を書き進めて \cite{...} を入れたら、必要に応じて削除してください。
+\nocite{*}
+\bibliographystyle{bib/sieicej}
+\bibliography{bib/reference}
+
+% IEEE形式に切り替える場合は IEEEtran.bst が必要（TeX環境に未導入だとビルド失敗）
+% \bibliographystyle{IEEEtran}
+% \bibliography{bib/IEEEabrv,bib/reference}
+
+
+%----------------------------------------------------------------------
+% 発表文献
+%----------------------------------------------------------------------
+\input{public}
+
+
+%----------------------------------------------------------------------
+% 付録
+%----------------------------------------------------------------------
+% \include{appendix}
+
+
+
+\end{document}

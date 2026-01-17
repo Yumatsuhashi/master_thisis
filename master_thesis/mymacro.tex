@@ -1,0 +1,96 @@
+%======================================================================
+% Macros
+%======================================================================
+
+%----------------------------------------------------------------------
+% 表で使う太めの罫線: \Hline
+%----------------------------------------------------------------------
+% IEICE Trans.からのパクリ
+% 未定義の時だけ定義
+\makeatletter
+ \@ifundefined{Hline}{\newcommand{\Hline}{\noalign{\hrule height 0.4mm}}}
+\makeatother
+
+
+%----------------------------------------------------------------------
+% desclab環境
+%----------------------------------------------------------------------
+% 使い方 
+% \begin{desclab}{ラベルが一番長いやつ}
+%  \item[ラベル1] ほげー
+%  \item[ラベル2] ふがー
+%  \item[ラベル3] ふがふが
+% \end{desclab}
+\def\desclablabel#1{\bf #1\hfill}
+\def\desclab#1{\list{}%
+ {\settowidth{\labelwidth}{\desclablabel{#1}}
+ \leftmargin\labelwidth
+ \advance\leftmargin\labelsep}
+ \let\makelabel\desclablabel}
+\let\enddesclab\endlist
+
+
+%----------------------------------------------------------------------
+% 数字にカンマを付加／数字からカンマを削除
+%----------------------------------------------------------------------
+% ここから拝借
+%   http://mytexpert.sourceforge.jp/index.php?%A5%E1%A5%E2%C4%A2%2FTeX%A5%DE%A5%AF%A5%ED3
+% 使い方
+%   \appendComma{10000}
+%   \stripComma{10,000}
+\makeatletter
+\newcount\@cnt@apcma
+\newcount\@cnt@apcmc
+%------------------------------
+% カンマを取り除く
+\def\strip@comma#1{%
+  \def\@tempstr{,}%
+  \expandafter\@tfor \expandafter\member
+   \expandafter:\expandafter=#1\expandafter\do{%
+     % もしカンマなら捨てる、それ以外は表示
+     \ifx\member\@tempstr\else\member\fi
+   }%
+}
+%------------------------------
+% カンマを追加する
+\def \append@comma#1{%
+  \def \@tempstr {,}%
+  \let \@temp@reversed \@empty
+  \expandafter\@tfor \expandafter\member
+  \expandafter:\expandafter=#1\expandafter\do{%
+    % まずは全ての要素を逆転させる
+    \edef \@temp@reversed {\member \@temp@reversed}%
+  }%
+  \@cnt@apcma \z@
+  \let \@temp@appended \@empty
+  \expandafter\@tfor \expandafter\member
+  \expandafter:\expandafter=\@temp@reversed \expandafter\do{%
+    % 四つ目の要素の場合は {0000} となっているのを car と cdr で
+    %   \@tempcmda := car (\@temp@appended) [先頭]
+    %   \@tempcmdb := cdr (\@temp@appended) [先頭以外]
+    % にして {[先頭],[先頭以外]}という処理ができるように前処理．
+    % ここで \@temp@appended に \member を追加（\member が空の時も
+    % ある）．
+    %    \@temp@appended := {\member \@tempcmda,\@tempcmdb}
+    \ifnum \@cnt@apcma = 4
+      \edef \@tempcmda {\expandafter \@car \@temp@appended \@nil}%
+      \edef \@tempcmdb {\expandafter \@cdr \@temp@appended \@nil}%
+      \edef \@temp@appended {\member \@tempcmda,\@tempcmdb}%
+      %o(\the\@cnt@apcma-\@tempcmda:\@tempcmdb)o% for debug
+      % ここでカウンタを次のカンマのために 1 に設定する
+      % この分岐にいる時点で $5i (i = 0, 1, \ldots, k)$ 番目のため．
+      \@cnt@apcma \@ne 
+    \else
+      % 4番目ではない要素の場合はそのまま \member をリストに追加
+      % \@temp@appended := {\member \@temp@appended}
+      \edef \@temp@appended {\member \@temp@appended}%
+    \fi
+    \advance \@cnt@apcma \@ne
+  }%
+  % 最期にリストを表示する
+  \@temp@appended 
+}
+% 
+\let \stripComma \strip@comma
+\let \appendComma \append@comma
+\makeatother
