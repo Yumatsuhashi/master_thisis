@@ -35,4 +35,7 @@
 \contentsline {table}{\numberline {4.17}{\ignorespaces 周期3パターンにおけるベースライン比較}}{83}{table.caption.70}%
 \contentsline {table}{\numberline {4.18}{\ignorespaces 周期2パターンにおけるベースライン比較}}{84}{table.caption.71}%
 \contentsline {table}{\numberline {4.19}{\ignorespaces ファインチューニング後の予測性能}}{84}{table.caption.72}%
+\contentsline {table}{\numberline {4.20}{\ignorespaces SPP・SPPPパターンにおける入出力の値の種別}}{88}{table.caption.77}%
+\contentsline {table}{\numberline {4.21}{\ignorespaces SPPパターンにおける予測NMSE}}{89}{table.caption.78}%
+\contentsline {table}{\numberline {4.22}{\ignorespaces SPPPパターンにおける予測NMSE}}{89}{table.caption.79}%
 \addvspace {10\p@ }
