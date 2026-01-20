@@ -139,6 +139,12 @@ pp.\textbullet\textbullet--\textbullet\textbullet, 2023.
 \url{https://wia.org/the-challenges-of-artificial-intelligence-in-the-ran/}, 2025.
 \newblock accessed Dec. 29, 2025.
 
+\bibitem{cover1991_universal_portfolios}
+T.M. Cover,
+``Universal portfolios,''
+Mathematical Finance,
+vol.1, no.1, pp.1--29, 1991.
+
 \bibitem{kalnay2003_atmospheric_modeling}
 E. Kalnay,
 Atmospheric Modeling, Data Assimilation and Predictability,
@@ -149,12 +155,6 @@ G. Evensen,
 ``The ensemble kalman filter: Theoretical formulation and practical implementation,''
 Ocean Dynamics,
 vol.53, pp.343--367, 2003.
-
-\bibitem{cover1991_universal_portfolios}
-T.M. Cover,
-``Universal portfolios,''
-Mathematical Finance,
-vol.1, no.1, pp.1--29, 1991.
 
 \bibitem{Makhlouf2025MOCSID}
 M.E.M. Makhlouf, M. Guillaud, and Y. Vindas,

@@ -1,28 +1,28 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces 5G NRにおけるフレーム構造の例（SCSごとのスロット数）\cite {researchgate_5gnr_nr_frame_structure}}}{7}{figure.caption.4}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces 5G NRのスロット構造\cite {eladawi_5gnr_slot_format}}}{8}{figure.caption.6}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces TDDとFDDの概念図\cite {policytracker_fdd_glossary}}}{9}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces CSI-RSとSRSの通信方向 （文献\cite {dongre2022implicit_channel_coordination}より）}}{9}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces チャネルエイジングの例\cite {jiang2022_transformer_mobility_negligible}}}{15}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces 時系列CSI予測の例\cite {zhu2019_adaptive_parameter_free_rnn}}}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 5G NRにおけるフレーム構造の例（SCSごとのスロット数）\cite {researchgate_5gnr_nr_frame_structure}}}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 5G NRのスロット構造\cite {eladawi_5gnr_slot_format}}}{7}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces TDDとFDDの概念図\cite {policytracker_fdd_glossary}}}{8}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces CSI-RSとSRSの通信方向 （文献\cite {dongre2022implicit_channel_coordination}より）}}{8}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces チャネルエイジングの例\cite {jiang2022_transformer_mobility_negligible}}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces 時系列CSI予測の例\cite {zhu2019_adaptive_parameter_free_rnn}}}{15}{figure.caption.12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 三次元モデル化に用いたエリア（池袋）}}{26}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 三次元モデル化に用いたエリア（渋谷）}}{27}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 三次元モデル化に用いたエリア（新宿）}}{28}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 三次元モデル化に用いたエリア（錦糸町）}}{29}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces 三次元モデル化に用いたエリア（八重洲）}}{30}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 三次元モデル化に用いたエリア（池袋）}}{26}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 三次元モデル化に用いたエリア（渋谷）}}{27}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 三次元モデル化に用いたエリア（新宿）}}{28}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 三次元モデル化に用いたエリア（錦糸町）}}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 三次元モデル化に用いたエリア（八重洲）}}{30}{figure.caption.20}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 提案機構の概要}}{50}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces ベースラインモデルの学習曲線}}{57}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 学習サンプル数と予測NMSEの関係}}{62}{figure.caption.46}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 各SNRにおける予測NMSE}}{64}{figure.caption.48}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces ベースラインモデルの学習曲線（NLoSからLoSへの適応）}}{66}{figure.caption.49}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces 学習サンプル数とファインチューニング後NMSEの関係（NLoSからLoSへの適応）}}{68}{figure.caption.52}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces 各SNRにおける予測NMSE（NLoSからLoSへの適応）}}{70}{figure.caption.54}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces ベースラインモデルの学習曲線（LoSからNLoSへの適応）}}{72}{figure.caption.55}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces 学習サンプル数とファインチューニング後NMSEの関係（LoSからNLoSへの適応）}}{75}{figure.caption.58}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces 各SNRにおける予測NMSE（LoSからNLoSへの適応）}}{77}{figure.caption.60}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces 周期3パターンにおけるLSTMベースラインモデルの学習曲線}}{83}{figure.caption.64}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces 周期2パターンにおけるLSTMベースラインモデルの学習曲線}}{83}{figure.caption.65}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 提案機構の概要}}{49}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces ベースラインモデルの学習曲線}}{56}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 学習サンプル数と予測NMSEの関係}}{60}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 各SNRにおける予測NMSE}}{62}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces ベースラインモデルの学習曲線（NLoSからLoSへの適応）}}{64}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 学習サンプル数とファインチューニング後NMSEの関係（NLoSからLoSへの適応）}}{66}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 各SNRにおける予測NMSE（NLoSからLoSへの適応）}}{68}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces ベースラインモデルの学習曲線（LoSからNLoSへの適応）}}{70}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces 学習サンプル数とファインチューニング後NMSEの関係（LoSからNLoSへの適応）}}{73}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces 各SNRにおける予測NMSE（LoSからNLoSへの適応）}}{75}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces 周期3出力1パターンにおけるLSTMベースラインモデルの学習曲線}}{81}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces 周期2出力1パターンにおけるLSTMベースラインモデルの学習曲線}}{81}{figure.caption.62}%
 \addvspace {10\p@ }
