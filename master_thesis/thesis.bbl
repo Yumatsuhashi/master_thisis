@@ -96,17 +96,42 @@ W. Zheng, Z. Liu, Y. Yuan, J. Li, B. He, and F. Lin,
 Proc.\ 2023 5th International Conference on Electronic Engineering and Informatics (EEI),
 pp.400--404, Jun. 2023.
 
+\bibitem{yang2020deep}
+F. Yang, Y. Wu, F. Wang, and S. Gong,
+``Deep transfer learning-based downlink channel prediction for {FDD} massive {MIMO} systems,''
+IEEE Transactions on Vehicular Technology,
+vol.69, no.11, pp.13294--13299, 2020.
+
+\bibitem{hoang2025map}
+L. Hoang, P. Frenger, and S. Eriksson,
+``Map-based foundation model for 5g massive mimo channel prediction,''
+Proc.\ IEEE International Conference on Communications (ICC),
+pp.\textbullet\textbullet--\textbullet\textbullet, 2025.
+\newblock To appear.
+
+\bibitem{hoang2025domain}
+H.T. Hoang, T.N. Do, and G. Kaddoum,
+``Domain adaptation-enabled realistic map-based channel estimation for {MIMO-OFDM},''
+Proc.\ 36th International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC),
+pp.1--6,
+Istanbul, Turkey, 2025.
+
 \bibitem{kim2023_meta_denoising_mimo}
 H. Kim, J. Choi, and D.J. Love,
 ``Massive {MIMO} channel prediction via meta-learning and deep denoising: Is a small dataset enough?,''
 IEEE Transactions on Wireless Communications,
-pp.\textbullet\textbullet--\textbullet\textbullet, 2023.
+vol.22, no.6, pp.4014--4028, June 2023.
 
 \bibitem{liu2024_llm4cp}
 B. Liu, X. Liu, S. Gao, X. Cheng, and L. Yang,
 ``{LLM4CP}: Adapting large language models for channel prediction,''
 Journal of Communications and Information Networks,
-pp.\textbullet\textbullet--\textbullet\textbullet, 2024.
+vol.9, no.2, pp.113--125, June 2024.
+
+\bibitem{xu2024learning}
+J. Xu, S. Jere, Y. Song, Y.-H. Kao, L. Zheng, and L. Liu,
+``Learning at the speed of wireless: Online real-time learning for {AI}-enabled {MIMO} in {NextG},''
+\url{https://arxiv.org/abs/2403.02651}, 2024.
 
 \bibitem{mohsin2025_continual_learning_channel_prediction}
 M.A. Mohsin, M. Umer, A. Bilal, M.A. Jamshed, and J.M. Cioffi,
@@ -114,11 +139,17 @@ M.A. Mohsin, M. Umer, A. Bilal, M.A. Jamshed, and J.M. Cioffi,
 \url{http://arxiv.org/abs/2506.22471}, 2025.
 \newblock arXiv:2506.22471, accessed Dec. 28, 2025.
 
+\bibitem{mohsin2025continual}
+M. Mohsin, W. Wang, S. Abeywickrama, J. Zhang, and C. Yuen,
+``Continual learning for channel estimation in time-varying environments,''
+IEEE Transactions on Wireless Communications,
+pp.\textbullet\textbullet--\textbullet\textbullet, 2025.
+\newblock Early Access.
+
 \bibitem{3gpp_tr38843}
  {3GPP},
 ``Study on artificial intelligence {AI} and machine learning {ML} for {NR} air interface,''
-3GPP TR 38.843,
-pp.\textbullet\textbullet--\textbullet\textbullet, 2023.
+3GPP TR 38.843, 2023.
 \newblock Release 18.
 
 \bibitem{nokia_aiml_ran}
@@ -158,9 +189,8 @@ vol.53, pp.343--367, 2003.
 
 \bibitem{Makhlouf2025MOCSID}
 M.E.M. Makhlouf, M. Guillaud, and Y. Vindas,
-``Multi-cell outdoor channel state information dataset (mocsid),''
-Proceedings of the 2025 EuCNC \& 6G Summit,
-pp.\textbullet\textbullet--\textbullet\textbullet, 2025.
+``Multi-cell outdoor channel state information dataset ({MOCSID}),''
+Presented at the 2025 EuCNC \& 6G Summit, 2025.
 
 \bibitem{mit}
 A. Kurs, A. Karalis, R. Moffatt, J.D. Joannopoulos, P. Fisher, and M. Solja{\v c}i{\'c},

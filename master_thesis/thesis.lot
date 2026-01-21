@@ -17,16 +17,16 @@
 \contentsline {table}{\numberline {3.14}{\ignorespaces 周期4出力1，周期3出力1，周期2出力1パターンにおける平均NMSE}}{45}{table.caption.33}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces 事前学習データのサンプル数}}{55}{table.caption.36}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces ベースラインモデルとCopy-LastのNMSE比較}}{57}{table.caption.38}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces ベースラインモデルと予測なしのNMSE比較}}{57}{table.caption.38}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces 補間値の配置位置による学習サンプルの構成}}{58}{table.caption.39}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Cubic Spline補間における配置位置ごとのファインチューニング結果}}{58}{table.caption.40}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces スプライン補間における配置位置ごとのファインチューニング結果}}{58}{table.caption.40}%
 \contentsline {table}{\numberline {4.5}{\ignorespaces 補間手法ごとの予測精度改善率}}{59}{table.caption.41}%
 \contentsline {table}{\numberline {4.6}{\ignorespaces 学習サンプル数と予測NMSEの関係}}{60}{table.caption.42}%
 \contentsline {table}{\numberline {4.7}{\ignorespaces 各SNRにおける予測NMSE}}{62}{table.caption.44}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces ベースラインモデルとCopy-LastのNMSE比較（NLoSからLoSへの適応）}}{64}{table.caption.47}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces ベースラインモデルと予測なしのNMSE比較（NLoSからLoSへの適応）}}{64}{table.caption.47}%
 \contentsline {table}{\numberline {4.9}{\ignorespaces 補間手法ごとのファインチューニング結果（NLoSからLoSへの適応）}}{65}{table.caption.48}%
 \contentsline {table}{\numberline {4.10}{\ignorespaces 各SNRにおける予測NMSE（NLoSからLoSへの適応）}}{68}{table.caption.50}%
-\contentsline {table}{\numberline {4.11}{\ignorespaces ベースラインモデルとCopy-LastのNMSE比較（LoSからNLoSへの適応）}}{71}{table.caption.53}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces ベースラインモデルと予測なしのNMSE比較（LoSからNLoSへの適応）}}{71}{table.caption.53}%
 \contentsline {table}{\numberline {4.12}{\ignorespaces 補間手法ごとのファインチューニング結果（LoSからNLoSへの適応）}}{71}{table.caption.54}%
 \contentsline {table}{\numberline {4.13}{\ignorespaces 各SNRにおける予測NMSE（LoSからNLoSへの適応）}}{74}{table.caption.56}%
 \contentsline {table}{\numberline {4.14}{\ignorespaces NLoS→LoS適応とLoS→NLoS適応の比較}}{76}{table.caption.58}%
