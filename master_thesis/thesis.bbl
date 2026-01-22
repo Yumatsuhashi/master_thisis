@@ -1,112 +1,130 @@
 \begin{thebibliography}{10}
 
-\bibitem{researchgate_5gnr_nr_frame_structure}
- {ResearchGate},
-``Illustration of the 5g nr frame structure (figure page),''
-\url{https://www.researchgate.net/figure/Illustration-of-the-5G-NR-frame-structure-depicting-the-number-of-slots-per-subframe-for_fig1_372516812}.
-\newblock Accessed Dec. 14, 2025.
-
 \bibitem{eladawi_5gnr_slot_format}
 M. Eladawi,
-``5g nr slot format deep dive,''
+``{5G~NR} slot format deep dive,''
 \url{https://www.mohamedeladawi.com/5g-nr-slot-format-deep-dive-2/}.
-\newblock Accessed Dec. 14, 2025.
+\newblock ref. Dec. 14, 2025.
 
 \bibitem{policytracker_fdd_glossary}
  {PolicyTracker},
-``Fdd (frequency division duplex) glossary page,''
+``{FDD} (frequency division duplex) glossary page,''
 \url{https://www.policytracker.com/glossary/fdd/}.
-\newblock Accessed Dec. 14, 2025.
+\newblock ref. Dec. 14, 2025.
 
 \bibitem{dongre2022implicit_channel_coordination}
 S. Dongre and H. Rahbari,
-``Implicit channel coordination to tackle starvation attacks in 5g and wi-fi coexistence systems,''
+``Implicit channel coordination to tackle starvation attacks in {5G} and {Wi-Fi} coexistence systems,''
 Proc.\ IEEE Global Communications Conference (GLOBECOM),
-pp.4136--4141, Dec. 2022.
+pp.4136--4141,
+Rio de Janeiro, Brazil, Dec. 2022.
 
 \bibitem{jiang2022_transformer_mobility_negligible}
 H. Jiang, M. Cui, D.W.K. Ng, and L. Dai,
 ``Accurate channel prediction based on transformer: Making mobility negligible,''
-IEEE Journal on Selected Areas in Communications,
+IEEE J.\ Sel.\ Areas Commun.,
 vol.40, no.9, pp.2717--2732, Sept. 2022.
 
 \bibitem{zhu2019_adaptive_parameter_free_rnn}
 Y. Zhu, X. Dong, and T. Lu,
 ``An adaptive and parameter-free recurrent neural structure for wireless channel prediction,''
-IEEE Transactions on Communications,
+IEEE Trans.\ Commun.,
 vol.67, no.11, pp.8086--8096, Nov. 2019.
+
+\bibitem{HattoriFujioka2018_5GTextbook}
+服部\hskip1zw武，藤岡雅宣，
+5G教科書: LTE/IoTから5Gまで，
+インプレス標準教科書シリーズ，
+インプレス，
+東京，2018．
 
 \bibitem{3gpp_38211}
  {3GPP},
-``{TS 38.211}: {NR}; {Physical} channels and modulation,''
+``{TS 38.211}: {NR}; physical channels and modulation,''
 \url{https://www.3gpp.org/ftp/Specs/archive/38_series/38.211/}.
-\newblock Accessed Dec. 14, 2025.
+\newblock ref. Dec. 14, 2025.
+
+\bibitem{adeogun2025_channel_prediction_survey}
+R. Adeogun,
+``Toward intelligent fading channel prediction: A comprehensive survey,''
+IEEE Access,
+vol.13, pp.111260--111281, 2025.
+
+\bibitem{jiang2025_ai_csi_prediction_5g}
+C. Jiang, J. Guo, X. Li, S. Jin, and J. Zhang,
+``{AI} for {CSI} prediction in {5G}-advanced and beyond,''
+China Commun.,
+vol.22, no.11, pp.1--16, 2025.
 
 \bibitem{li2019_dl_mimo_csi_feedback}
 J. Li, Q. Zhang, X. Xin, Y. Tao, Q. Tian, F. Tian, D. Chen, Y. Shen, G. Cao, Z. Gao, and J. Qian,
 ``Deep learning-based massive {MIMO} {CSI} feedback,''
 Proc.\ 2019 18th International Conference on Optical Communications and Networks (ICOCN),
-pp.1--3, Aug. 2019.
+pp.1--3,
+Huangshan, China, Aug. 2019.
 
 \bibitem{3gpp_38821}
  {3GPP},
-``{TR 38.821}: {Solutions for NR to support Non-Terrestrial Networks (NTN)},''
+``{TR 38.821}: Solutions for {NR} to support non-terrestrial networks ({NTN}),''
 \url{https://www.3gpp.org/ftp/Specs/archive/38_series/38.821/}.
-\newblock Accessed Dec. 17, 2025.
+\newblock ref. Dec. 17, 2025.
 
 \bibitem{wiener1949extrapolation}
 N. Wiener,
 Extrapolation, Interpolation, and Smoothing of Stationary Time Series: With Engineering Applications,
-Technology Press of the Massachusetts Institute of Technology and John Wiley \& Sons,
-Cambridge, MA and New York, 1949.
+MIT Press and John Wiley \& Sons,
+Cambridge, MA, 1949.
 
 \bibitem{arya2018_kalman_channel_aging}
 V. Arya and K. Appaiah,
 ``Kalman filter based tracking for channel aging in massive {MIMO} systems,''
 Proc.\ 2018 International Conference on Signal Processing and Communications (SPCOM),
-pp.362--366, 2018.
+pp.362--366,
+Bangalore, India, July 2018.
 
 \bibitem{zhang2021_cv3dcnn}
 Y. Zhang, J. Wang, J. Sun, B. Adebisi, H. Gacanin, G. Gui, and F. Adachi,
 ``{CV-3DCNN}: Complex-valued deep learning for {CSI} prediction in {FDD} massive {MIMO} systems,''
-IEEE Wireless Communications Letters,
+IEEE Wireless Commun.\ Lett.,
 vol.10, no.2, pp.266--270, Feb. 2021.
 
 \bibitem{ding2013_cvnn_fading}
 T. Ding and A. Hirose,
 ``Fading channel prediction based on complex-valued neural networks in frequency domain,''
 Proc.\ 2013 International Symposium on Electromagnetic Theory (EMTS),
-pp.640--643, May 2013.
+pp.640--643,
+Hiroshima, Japan, May 2013.
 
 \bibitem{jiang2019_rnn_freqdomain_prediction}
 W. Jiang and H.D. Schotten,
 ``Recurrent neural network-based frequency-domain channel prediction for wideband communications,''
 Proc.\ 2019 IEEE 89th Vehicular Technology Conference (VTC2019-Spring),
-pp.1--6, Apr. 2019.
+pp.1--6,
+Kuala Lumpur, Malaysia, Apr. 2019.
 
 \bibitem{yuan2020_ml_channel_prediction_aging}
 J. Yuan, H.Q. Ngo, and M. Matthaiou,
 ``Machine learning-based channel prediction in massive {MIMO} with channel aging,''
-IEEE Transactions on Wireless Communications,
+IEEE Trans.\ Wireless Commun.,
 vol.19, no.5, pp.2960--2973, May 2020.
 
 \bibitem{zheng2023_attention_fading_prediction}
 W. Zheng, Z. Liu, Y. Yuan, J. Li, B. He, and F. Lin,
 ``Fading channel prediction based on attention mechanism,''
 Proc.\ 2023 5th International Conference on Electronic Engineering and Informatics (EEI),
-pp.400--404, Jun. 2023.
+pp.400--404,
+Wuhan, China, Jun. 2023.
 
 \bibitem{yang2020deep}
 F. Yang, Y. Wu, F. Wang, and S. Gong,
 ``Deep transfer learning-based downlink channel prediction for {FDD} massive {MIMO} systems,''
-IEEE Transactions on Vehicular Technology,
+IEEE Trans.\ Veh.\ Technol.,
 vol.69, no.11, pp.13294--13299, 2020.
 
 \bibitem{hoang2025map}
 L. Hoang, P. Frenger, and S. Eriksson,
-``Map-based foundation model for 5g massive mimo channel prediction,''
-Proc.\ IEEE International Conference on Communications (ICC),
-pp.\textbullet\textbullet--\textbullet\textbullet, 2025.
+``Map-based foundation model for {5G} massive {MIMO} channel prediction,''
+Proc. IEEE International Conference on Communications (ICC), Montreal, Canada, June 2025.
 \newblock To appear.
 
 \bibitem{hoang2025domain}
@@ -119,32 +137,50 @@ Istanbul, Turkey, 2025.
 \bibitem{kim2023_meta_denoising_mimo}
 H. Kim, J. Choi, and D.J. Love,
 ``Massive {MIMO} channel prediction via meta-learning and deep denoising: Is a small dataset enough?,''
-IEEE Transactions on Wireless Communications,
+IEEE Trans.\ Wireless Commun.,
 vol.22, no.6, pp.4014--4028, June 2023.
 
 \bibitem{liu2024_llm4cp}
 B. Liu, X. Liu, S. Gao, X. Cheng, and L. Yang,
 ``{LLM4CP}: Adapting large language models for channel prediction,''
-Journal of Communications and Information Networks,
+J.\ Commun.\ Inf.\ Netw.,
 vol.9, no.2, pp.113--125, June 2024.
 
 \bibitem{xu2024learning}
 J. Xu, S. Jere, Y. Song, Y.-H. Kao, L. Zheng, and L. Liu,
 ``Learning at the speed of wireless: Online real-time learning for {AI}-enabled {MIMO} in {NextG},''
 \url{https://arxiv.org/abs/2403.02651}, 2024.
+\newblock arXiv:2403.02651.
 
 \bibitem{mohsin2025_continual_learning_channel_prediction}
 M.A. Mohsin, M. Umer, A. Bilal, M.A. Jamshed, and J.M. Cioffi,
 ``Continual learning for wireless channel prediction,''
 \url{http://arxiv.org/abs/2506.22471}, 2025.
-\newblock arXiv:2506.22471, accessed Dec. 28, 2025.
+\newblock arXiv:2506.22471, ref. Dec. 28, 2025.
 
 \bibitem{mohsin2025continual}
 M. Mohsin, W. Wang, S. Abeywickrama, J. Zhang, and C. Yuen,
 ``Continual learning for channel estimation in time-varying environments,''
-IEEE Transactions on Wireless Communications,
-pp.\textbullet\textbullet--\textbullet\textbullet, 2025.
+IEEE Trans. Wireless Commun., 2025.
 \newblock Early Access.
+
+\bibitem{chen2025_channel_deduction}
+Z. Chen, Z. Zhang, Z. Yang, C. Huang, and M. Debbah,
+``Channel deduction: A new learning framework to acquire channel from outdated samples and coarse estimate,''
+IEEE J.\ Sel.\ Areas Commun.,
+vol.43, no.3, pp.944--958, 2025.
+
+\bibitem{li2024_incomplete_history_prediction}
+D. Li, H. Li, H. Zhang, and X. Gu,
+``A channel prediction scheme under the condition of incomplete history,''
+Proc.\ 2024 4th International Conference on Neural Networks, Information and Communication Engineering (NNICE),
+pp.1264--1268, 2024.
+
+\bibitem{tekgul2022_incomplete_history}
+E. Tekgul, J. Chen, J. Tan, F. Vook, S. {\"O}zen, and A. Jajoo,
+``Deep learning-based channel state information prediction with incomplete history,''
+Proc.\ 2022 IEEE Wireless Communications and Networking Conference (WCNC),
+pp.447--452, 2022.
 
 \bibitem{3gpp_tr38843}
  {3GPP},
@@ -153,22 +189,22 @@ pp.\textbullet\textbullet--\textbullet\textbullet, 2025.
 \newblock Release 18.
 
 \bibitem{nokia_aiml_ran}
- Nokia,
+ {Nokia},
 ``Scaling up {AI}/{ML} for cellular radio access,''
 \url{https://www.nokia.com/blog/scaling-up-aiml-for-cellular-radio-access/}, 2025.
-\newblock accessed Dec. 29, 2025.
+\newblock ref. Dec. 29, 2025.
 
 \bibitem{arxiv_3gpp_standardization}
  Others,
 ``On the combination of {AI} and wireless technologies: {3GPP} standardization progress,''
 \url{https://arxiv.org/abs/2407.10984}, 2024.
-\newblock arXiv:2407.10984, accessed Dec. 29, 2025.
+\newblock arXiv:2407.10984, ref. Dec. 29, 2025.
 
 \bibitem{wia_challenges}
- {Wireless Infrastructure Association},
-``The challenges of artificial intelligence in the {RAN},''
+ {\mbox{Wireless Infrastructure Association}},
+``\mbox{The challenges of artificial intelligence in the RAN},''
 \url{https://wia.org/the-challenges-of-artificial-intelligence-in-the-ran/}, 2025.
-\newblock accessed Dec. 29, 2025.
+\newblock ref. Dec. 29, 2025.
 
 \bibitem{cover1991_universal_portfolios}
 T.M. Cover,
@@ -179,11 +215,12 @@ vol.1, no.1, pp.1--29, 1991.
 \bibitem{kalnay2003_atmospheric_modeling}
 E. Kalnay,
 Atmospheric Modeling, Data Assimilation and Predictability,
-Cambridge University Press, 2003.
+Cambridge University Press,
+Cambridge, UK, 2003.
 
 \bibitem{evensen2003_enkf}
 G. Evensen,
-``The ensemble kalman filter: Theoretical formulation and practical implementation,''
+``The ensemble {Kalman} filter: Theoretical formulation and practical implementation,''
 Ocean Dynamics,
 vol.53, pp.343--367, 2003.
 
@@ -199,16 +236,16 @@ Science,
 vol.317, no.5834, pp.83--86, July 2007.
 
 \bibitem{metal_ferrite_2}
-T. {Campi}, S. {Cruciani}, and M. {Feliziani},
+T. Campi, S. Cruciani, and M. Feliziani,
 ``Magnetic shielding of wireless power transfer systems,''
-Proc.\ 2014 International Symposium on Electromagnetic Compatibility, Tokyo,
+Proc.\ 2014 International Symposium on Electromagnetic Compatibility,
 pp.422--425,
 Tokyo, Japan, Dec. 2014.
 
 \bibitem{gama2014_concept_drift_survey}
 J. Gama, I. {\v{Z}}liobait{\.{e}}, A. Bifet, M. Pechenizkiy, and A. Bouchachia,
 ``A survey on concept drift adaptation,''
-ACM Computing Surveys,
+ACM Comput.\ Surv.,
 vol.46, no.4, pp.44:1--44:37, 2014.
 
 \end{thebibliography}

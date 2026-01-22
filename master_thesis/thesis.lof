@@ -1,6 +1,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces 5G NRにおけるフレーム構造の例（SCSごとのスロット数）\cite {researchgate_5gnr_nr_frame_structure}}}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 5G NRにおけるフレーム構造の例（SCSごとのスロット数）}}{6}{figure.caption.4}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces 5G NRのスロット構造\cite {eladawi_5gnr_slot_format}}}{7}{figure.caption.6}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces TDDとFDDの概念図\cite {policytracker_fdd_glossary}}}{8}{figure.caption.8}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces CSI-RSとSRSの通信方向 （文献\cite {dongre2022implicit_channel_coordination}より）}}{8}{figure.caption.9}%

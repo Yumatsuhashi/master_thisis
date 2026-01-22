@@ -1,0 +1,251 @@
+今のリファレンスについて　 いかのリファレンスルールを守っているか確認して欲しい
+文献のリスト法
+
+文献は，次の点に留意するとともに以下に示す形式に従ってリストする．
+
+(a)	付録Eの「学術雑誌略語表」に掲載されている雑誌名は，同表に従って略語で記す．
+付録Eとは以下の通り
+## 1. 邦文雑誌
+
+| 略語 | 雑誌名 |
+| :--- | :--- |
+| 信学誌 | 電子情報通信学会誌 |
+| 信学論（A） | 電子情報通信学会論文誌（A） |
+| 信学技報 | 電子情報通信学会技術研究報告 |
+| 昭60信学総全大 | 昭和60年電子情報通信学会総合全国大会講演論文集（昭和51年～62年） |
+| 昭61信学△△全大 | 昭和61年電子情報通信学会△△部門全国大会講演論文集（昭和51年～62年） |
+| 昭63信学○季全大 | 昭和63年電子情報通信学会○季全国大会講演論文集 |
+| 1990信学春季全大 | 1990年電子情報通信学会春季全国大会講演論文集（1989年～1991年春季全大） |
+| 信学’92春大 | 1992年電子情報通信学会春季大会講演論文集（1992年～1994年） |
+| 信学’93秋大 | 1993年電子情報通信学会秋季大会講演論文集（1991年～1994年） |
+| 1995信学総大 | 1995年電子情報通信学会総合大会講演論文集（1995年～） |
+| 1995信学ソ大（基礎・境界） | 1995年電子情報通信学会ソサイエティ大会（基礎・境界）講演論文集（1995年～） |
+| 平2連大 | 平成2年電気・情報関連学会連合大会講演論文集 |
+| 平3△△連大 | 平成3年（度）電気関係学会△△支部連合大会講演論文集 |
+| ME誌 | 医用電子と生体工学 |
+| 応用物理 | 応用物理学会誌 |
+| 第10回応物春季予稿集 | 第10回春季応用物理学関係連合講演会講演予稿集 |
+| 第11回応物秋季予稿集 | 第11回秋季応用物理学会学術講演予稿集 |
+| 画電学誌 | 画像電子学会誌 |
+| 昭60画電学全大 | 昭和60年度画像電子学会第Ｘ回全国大会予稿集 |
+| 計測制御 | 計測と制御 |
+| 情報処理 | 情報処理 |
+| 情処学論 | 情報処理学会論文誌 |
+| 情処学△△研報 | 情報処理学会△△研究報告 |
+| 照学誌 | 照明学会誌 |
+| 人工知能誌 | 人工知能学会誌 |
+| テレビ誌 | テレビジョン学会誌 |
+| テレビ学技報 | テレビジョン学会技術報告 |
+| 1991テレビ学全大 | 1991年テレビジョン学会全国大会講演予稿集 |
+| 映情学誌 | 映像情報メディア学会誌 |
+| 映情学技報報告 | 映像情報メディア学会技術 |
+| 電学誌 | 電気学会雑誌 |
+| 電学論 | 電気学会論文誌 |
+| 電学△△研資 | 電気学会技術委員会△△研究会資料 |
+| 平3電学全大 | 平成3年電気学会全国大会講演論文集 |
+| 音響誌 | 日本音響学会誌 |
+| 音響学△△研資 | 日本音響学会△△研究会資料 |
+| 物学誌 | 日本物理学会誌 |
+| NHK 技術 | NHK 技術研究 |
+| 研実報 | 電気通信研究所研究実用化報告 |
+
+## 2. 欧文雑誌
+
+| 略語 | 雑誌名 |
+| :--- | :--- |
+| ACM Trans. ×× | ACM Transactions on ×× |
+| Acta Inform. | Acta Informatica |
+| Acustica | Acustica |
+| Adv. Eng. Softw. | Advances in Engineering Software |
+| AIP Conf. Proc. | AIP Conference Proceedings |
+| Alta Freq. | Alta Frequenza |
+| Artif. Intell. | Artificial Intelligence |
+| AT & T Tech. J. | AT & T Technical Journal |
+| Aust. Telecommun. Res. | Australian Telecommunication Research |
+| Bell Lab. Rec. | Bell Laboratories Record |
+| Biol. Cybern. | Biological Cybernetics |
+| Biophys. J. | Biophysical Journal |
+| Br. Telecommun. Eng. | British Telecommunications Engineering |
+| Circuits Syst. Signal Process. | Circuits, System, and Signal Processing |
+| Commun. ACM | Communications of the ACM |
+| Comput. Humanit. | Computers and the Humanities |
+| Comput. Oper. Res. | Computers & Operations Research |
+| Comput. Aided Des. | Computer Aided Design |
+| Comput. Appl. | Computer Applications |
+| Comput. J. | Computer Journal |
+| Comput. Lang. | Computer Languages |
+| Comput. Netw. | Computer Networks |
+| Comput. Surv. | Computer Surveys |
+| Computer | Computer |
+| COMSAT Tech. Rev. | COMSAT Technical Review |
+| Control Eng. | Control Engineering |
+| Cybernetics | Cybernetics |
+| Database J. | Database Journal |
+| Digit. Processes | Digital Processes |
+| Electron. Des. | Electronic Design |
+| Electron. Eng. | Electronic Engineering |
+| Electron. Lett. | Electronics Letters |
+| Electronics | Electronics |
+| Elektron. Rechenanl. | Elektronische Rechenanlagen |
+| Ericsson Rev. | Ericsson Review |
+| Frequenz | Frequenz |
+| Hewlett-Packard J. | Hewlett-Packard Journal |
+| IBM J. Res. Dev. | IBM Journal of Research and Development |
+| IBM Syst. J. | IBM Systems Journal |
+| IBM Tech. Discl. Bull. | IBM Technical Disclosure Bulletin |
+| IEE Proc. A～J | IEE Proceedings A～J |
+| IEEE Commun. Mag. | IEEE Communications Magazine |
+| IEEE Electron Device Lett. | IEEE Electron Device Letters |
+| IEEE J. ×× | IEEE Journal of ×× |
+| IEEE Micro | IEEE Micro |
+| IEEE Spectr. | IEEE Spectrum |
+| IEEE Trans. ×× | IEEE Transactions on ×× |
+| IEICE Trans. Fundamentals | IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences (1992～) |
+| IEICE Trans. Commun. | IEICE Transactions on Communications (1992～) |
+| IEICE Trans. Electron. | IEICE Transactions on Electronics (1992～) |
+| IEICE Trans. Inf. & Syst. | IEICE Transactions on Information and Systems (1992～) |
+| Inf. Control | Information and Control |
+| Inf. Process. Lett. | Information Processing Letters |
+| Inf. Sci. | Information Sciences |
+| Inf. Syst. | Information Systems |
+| Inf. J. ×× | Information Journal of ×× |
+| Izv. Akad. Nauk SSSR Ser. Fiz. | Izvestiya Akademii Nauk SSSR, Seriya Fizicheskaya |
+| J. Acoust. Soc. Am. | Journal of the Acoustical Society of America |
+| J. Am. Soc. Inf. Sci. | Journal of the American Society for Information Science |
+| J. Appl. Phys. | Journal of Applied Physics |
+| J. Assoc. Comput. Mach. | Journal of the Association for Computing Machinery |
+| J. Comput. Syst. Sci. | Journal of Computer and System Sciences |
+| J. Inf. Process. | Journal of Information Processing |
+| J. Opt. Soc. Am. | Journal of the Optical Society of America |
+| J. Phys. Chem. Solids | Journal of the Physics and Chemistry of Solids |
+| J. Phys. A～G | Journal of Physics A～G |
+| J. Radio Res. Lab. | Journal of the Radio Research Laboratories |
+| J. Solid State Chem. | Journal of Solid State Chemistry |
+| J. Speech Hear. Res. | Journal of Speech and Hearing Research |
+| J. Syst. Softw. | Journal of Systems and Software |
+| JETP Lett. | JETP Letters |
+| Jpn. J. Appl. Phys. 1, Regul. Pap. Short Notes | Japanese Journal of Applied Physics, Part 1 (Regular Papers & Short Notes) |
+| Jpn. J. Appl. Phys. 2, Lett. | Japanese Journal of Applied Physics, Part 2 (Letters) |
+| Kybernetika | Kybernetika |
+| Math. Comput. | Mathematics of Computation |
+| Math. Program. | Mathematical Programming |
+| Microelectron. Reliab. | Microelectronics and Reliability |
+| Microw. J. | Microwave Journal |
+| Microw. RF | Microwaves & RF |
+| Nachr.tech. Elektron. | Nachrichtentechnik Elektronik |
+| Nachr.tech. Z. | Nachrichtentechnische Zeitschrift |
+| Nav. Res. Logist. Q. | Naval Research Logistics Quarterly |
+| Navigation | Navigation |
+| Networks | Networks |
+| Oper. Res. | Operations Research |
+| Oper. Syst. Rev. | Operating Systems Review |
+| Opt. Quantum Electron. | Optical and Quantum Electronics |
+| Opt. Eng. | Optical Engineering |
+| Pattern Recognit. | Pattern Recognition |
+| Perform. Eval. Rev. | Performance Evaluation Review |
+| Philips Tech. Rev. | Philips Technical Review |
+| Proc. IEEE | Proceedings of the IEEE |
+| Proc. Natl. Acad. Sci. USA | Proceedings of the National Academy of Sciences of the United States of America |
+| Proc. R. Soc. Lond. A, Math. Phys. Eng. Sci. | Proceedings of the Royal Society of London, Series A (Mathematical, Physical and Engineering Sciences) |
+| Radio Eng. Electron. Phys. | Radio Engineering and Electronic Physics |
+| Radio Sci. | Radio Science |
+| Radiotekh. Elektron. | Radiotekhnika i Elektronika |
+| RCA Rev. | RCA Review |
+| SIAM J. Comput. | SIAM Journal on Computing |
+| Siemens Rev. | Siemens Review |
+| Simulation | Simulation |
+| SMPTE J. | SMPTE Journal |
+| Softw. Pract. Exp. | Software-Practice and Experience |
+| Solid State Commun. | Solid State Communications |
+| Solid-State Electron. | Solid-State Electronics |
+| Solid State Technol. | Solid State Technology |
+| Sov. J. Opt. Technol. | Soviet Journal of Optical Technology |
+| Sov. J. Quantum Electron. | Soviet Journal of Quantum Electronics |
+| Speech Technol. | Speech Technology |
+| Surf. Sci. | Surface Science |
+| Telecommun. Radio Eng. 1, Telecommun. | Telecommunications and Radio Engineering, Part 1 (Telecommunications) |
+| Telecommun. Radio Eng. 2, Radio Eng. | Telecommunications and Radio Engineering, Part 2 (Radio Engineering) |
+| Telecommun. J. | Telecommunication Journal |
+| Thin Solid Films | Thin Solid Films |
+| Trans. ASME, J. Dyn. Syst. Meas. Control | Transactions of the ASME. Journal of Dynamic Systems, Measurement and Control |
+| VLSI Des. | VLSI Design |
+| Z. Nat.forsch. A, Astrophys. Phys. Phys. Chem. | Zeitschrift fur Naturforschung A (Astrophysik, Physik und Physikalische Chemie) |
+| 19○○ IEEE Int. Conv. Rec. | 19○○ IEEE International Convention Record |
+| 19○○ ISSCC | 19○○ IEEE International Solid-State Circuits Conference Digest of Technical Papers |
+
+
+(b)	著者が複数の場合には，全著者の氏名を記入する．なお，欧文の場合にはイニシャルと姓名を記入し, A.G. Wine のようにイニシャルと姓名の間にのみ半角スペースを挿入する．
+(c)	英文論文の標題中の単語については，文頭以外は小文字を使用する．
+(d)	欧文文献においては，常に半角ピリオド「.」と半角カンマ「,」を用いる．和文文献においては，読点には全角の「，」を用い，「vol.」，「no.」，「pp.」あるいは月名等の省略記号及び行末の句点には半角ピリオド「.」を用いる．なお，vol.J62-B，no.1，pp.20-27等の場合には，半角ピリオド「.」の後ろにはスペースは挿入しない．
+(e)	発行の年月を記載する場合には，月年の順で，月名には英語を，年には西暦を用いる．
+(f)	Webページは改版や消滅の可能性があるので，URLを参照することはできるだけ避ける．ただし，標準化団体などが文書公表の場をWebページにしている場合などはこの限りではない．
+(g)	和文表記の文献については，その英語表記を併記する．具体的には次の通りとする．
+(g.1) 文献に英訳が存在する場合，次の2つのいずれかの方法を選択し，これに従って，記載を行なう．
+(g.1.1) 和文表記の文献を記載し，改行の上，その英文表記の文献を併記する．
+  ■ (g.1.1) の例
+  [1] 大濱靖匡，“相互に関連を持つ符号器による多元情報源の符号化,”信学論(A), Vol.J75-A, no.7, pp.1193-1200, July 1992.
+    Y. Oohama, “Multiterminal source coding with linked encoders,” IEICE Trans. Fundamentals (Japanese Edition), vol.J75-A, no.7, pp.1193-1200, July 1992.
+(g.1.2) 和文表記の文献の代わりに英文表記の文献を記載する．
+  ■ (g.1.2) の例
+ [1] Y. Oohama, “Multiterminal source coding with linked encoders,” IEICE Trans. Fundamentals (Japanese Edition), vol.J75-A, no.7, pp.1193-1200, July 1992.
+(g.2) 文献に英訳が存在しない場合，和文表記の文献を記載し，改行の上，その和文の題目，雑誌名などをローマ字表記としたものを併記する．
+ ■ (g.2) の例
+  [1] 韓太舜，小林欣吾，情報と符号化の数理，培風館，東京1999.
+    T.S. Han and K. Kobayashi, JYOHO TO FUGOUKA NO SUURI, Baifukan, Tokyo 1999.
+
+	
+■ 雑誌
+
+[1]	著者名，"標題，"　雑誌名，巻，号，pp.を付けて始め−終りのページ，月年.
+Author name, “Title,” Journal title, volume, issue, Start-End page with pp., Month Year.
+[1]	山上一郎，山下二郎，"パラメトリック増幅器，" 信学論（B）, vol.J62-B, no.1, pp.20-27, Jan. 1979.
+I. Yamagami and J. Yamashita, “Parametric amplifier,” IEICE Trans. Commun. (Japanese Edition), vol.J62-B, no.1, pp.20-27, Jan. 1979.
+[1]	W. Rice, A.C. Wine, and B.D. Grain, "Diffusion of impurities during epitaxy." Proc. IEEE, vol.52, no.3, pp.284-290, March 1964.
+
+■ 著書，編書
+
+[2]	著者名，書名，編者名，発行所，発行都市名，発行年.
+Author name, Book title, Editor name, Publisher, Issuing City name, Year of issue.
+[2]	山田太郎，移動通信，木村次郎（編），（社）電子情報通信学会，東京，1989.
+T. Yamada, Mobile communication, J. Kimura (ed.), IEICE, Tokyo, 1989.
+[2]	H. Tong, Nonlinear Time Series: A Dynamical System Approach, J.B. Elsner, ed., Oxford University Press, Oxford, 1990.
+
+■ 著書の一部を引用する場合
+
+[3]	著者名，"標題，" 書名，編者名，章番号またはpp.を付けて始め−終りのページ，発行所，発行都市名，発行年.
+Author name, “Title,” Book title, Editor name, Chapter number or Start-End page with pp., Publisher, Issuing City name, Year of issue.
+[3]	山田太郎，"周波数の有効利用，" 移動通信，木村次郎（編），pp.21-41，（社）電子情報通信学会，東京，1989.
+T. Yamada, “Effective use of frequency,” Mobile communication, J. Kimura (ed.), pp.21-41, IEICE, Tokyo, 1989.
+[3]	H.K. Hartline, A.B. Smith, and F. Ratlliff, "Inhibitory interaction in the retina," in Handbook of Sensory Physiology, ed. M.G.F. Fuortes, pp.381-390, Springer-Verlag, Berlin, 1972.
+
+■ 国際会議
+
+[4]	著者名，"標題，" 会議名，no.を付けて論文番号，pp.を付けて始め−終りのページ，開催都市名，国名，月年.
+Author name, “Title,” Conference name, Article number with no., Start-End page with pp., Host city name, Country of issue, Month Year.
+[4]	Y. Yamamoto, S. Machida, and K. Igeta,　 "Micro-cavity semiconductors with enhanced spontaneous　emission," Proc. 16th European Conf. on Opt. Commun., no.MoF4.6, pp.3-13, Amsterdam, The Netherlands, Sept. 1990.
+
+■ 国内大会，研究会論文集
+
+[5]	著者名，"標題，" 学会論文集名，分冊または号，no.を付けて論文番号，pp.を付けて始め−終りのページ，月年.
+[5]	川上三郎，川口四郎，"紫外域半導体レーザ，"1995信学全大，分冊2, no.SB2-1, pp.20-21, 東京，日本，Sept. 1995.
+S. Kawakami and S. Kawaguchi, “Ultraviolet semiconductor laser,” Proc. IEICE Gen. Conf. 1995, Ⅱ, no.SB2-1, pp.20-21, Tokyo, Japan, Sept. 1995.
+■ Webページ
+
+[6]	著者名，Webページタイトル，サイト管理者名等，URL，文書年月または参照年月日.
+[6]	D. Provan, "Request for comments 1234: Tunneling IPX traffic through IP　networks," IETF,http://www.ietf.org/rfc/rfc1234.txt,June 1991.
+[6]	著作権管理委員会, "本会出版物（技術研究報告以外）に掲載された論文等の著作権の利用申請基準," 電子情報通信学会,https://www.ieice.org/jpn/about/kitei/files/chosaku_hyou3.pdf, 参照Aug. 3,2009.
+IEICE Copyright Management Committee, “IEICE Provisions on Copyright,” IEICE, https://www.ieice.org/jpn/about/kitei/chosakukenkitei.pdf, ref. Aug. 3, 2009.
+
+2.6.2　DOIが付与された文献のリスト方法
+
+　 DOI（Digital Object Identifier）が付与された文献をリストする場合には，必ずDOIを付与することが望ましい．
+
+■ DOIが付与された文献のリスト方法
+
+[1]	著者名， ”標題，” 雑誌名．月年．DOI
+[1]	山上一郎， 山下二郎， “○○の解析，” 信学論(D), Jan．2014．DOI:10.14923/transinfj.2014JDP0001
+
+あるいは，
+
+[2]	著者名， ”標題，” 雑誌名， 巻， 号， pp.を付けて始め−終りのページ，月年．DOI
+[2]	山上一郎， 山下二郎，“○○の解析，” 信学論(D), vol.J-62D, no.1, pp.20-27, Jan. 2014. DOI:10.14923/transinfj.2014JDP000
